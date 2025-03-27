@@ -1,0 +1,91 @@
+*{margin: 0;padding: 0;}
+a{color:inherit;text-decoration: none;-webkit-tap-highlight-color:transparent;display: block;width: 100%;height: 100%;}/*取消a标签在移动端点击时产生的背景色*/
+ul{list-style: none;}
+html{font-size: 100%;}
+img{border: 0;display: block;margin: 0;padding: 0;}
+
+body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe52.png#92c201942ea34efdbb36345b10d7d48f); */background-color:#090A07;font-size: 0.875rem;}
+
+/* 导航 */
+.navbar-wrap{width: 100%;height: auto;}
+/* 菜单内容 */
+.navbar-box{width: 90%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
+/* 头像 */
+.navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
+/* 列表 */
+.navbar-list{display: flex;flex-wrap: nowrap;}
+.navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;color: #a7a7a7;}
+.navbar-list>li:hover{color: #fff;}
+.mobile-navbar-title{transition: 0s all ease;opacity: 0;visibility: hidden;width: 0;}
+/* 移动端菜单展开按钮 */
+.mobile-navbar{display: none;-webkit-tap-highlight-color:transparent;}
+
+/* 主题内容 */
+.main{width:100%;height: auto;color: #fff;}
+.main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
+.main-separate{width: 0.0625rem;height: 0.875rem;background-color: #ffffff;}
+.main-line{width: 67rem;height: 0.0625rem;background-color: #fff;}
+.main-circular{width: 0.875rem;height: 0.875rem;border-radius: 100%;border:0.125rem solid #fff;}
+/* 内容 */
+.main-content{width: 90%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.main-content-personal div{width: 19.8%;height: auto;margin-bottom: 0.25rem;}
+.main-content div img{width: 100%;height: auto;transition: all 0.3s ease;}
+/* 画册排版 */
+.main-content-album div{width: 33%;height: auto;margin-bottom: 0.6rem;}
+.main-content-album-1 div{width:100%;height: auto;margin-bottom: 0.6rem;}
+.main-content-album-2 div{width: 33%;height: auto;margin-bottom: 0.6rem;}
+/* h5 */
+.main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
+/* 3d */
+.main-content-3d div{width: 49.5%;height: auto;margin-bottom: 1rem;}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 767px) {
+	/* 导航 */
+	.navbar-wrap{background-color: #090A07;}
+	/* 菜单内容 */
+	.navbar-box{flex-wrap: wrap;width: 95%;}
+	/* 列表 */
+	.navbar-list{flex-wrap: wrap;width: 100%;order: 1;display: none;}
+	.navbar-list>li{width: 100%;margin: 0;padding: 0.8rem 0 0.8rem 0;}
+	.mobile-navbar-title{font-size: 1.75rem;color: #fff;font-weight: bold;margin-bottom: 1rem;display: ;opacity: 1;visibility: visible;width: fit-content;transition: 0.5s all ease;}
+	/* 移动端菜单展开按钮 */
+	.mobile-navbar{width: 100%;height: 3.5rem;cursor: pointer;display: flex;flex-direction: row-reverse;align-items: center;}
+	.mobile-navbar>ul{width: 1.2rem;height: 0.9rem;position: relative;}
+	.mobile-navbar>ul>li{width: 1.2rem;height: 0.12rem;background-color: #fff;position: absolute;transition: all 0.3s ease;}
+	.mobile-navbar>ul>li:first-child{top: 0;}
+	.mobile-navbar>ul>li:nth-child(2){top: 0.39rem;}
+	.mobile-navbar>ul>li:last-child{bottom: 0;}
+	/* 头像 */
+	.navbar-person{width: 100%;display: flex;flex-direction: row-reverse;display: none;}
+	
+	/* 主题 */
+	.main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;text-transform: uppercase;}
+	.main-separate{margin: 0 0.5rem;}
+	.main-line{margin: 0.5rem 0 0rem 0;opacity: 0.25;}
+	.main-circular{display: none;}
+	/* 内容 */
+	.main-content-personal div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
+	/* 画册排版 */
+	.main-content-album div{width: 100%;height: auto;margin-bottom: 0.6rem;}
+	.main-content-album-2 div{width: 100%;height: auto;margin-bottom: 0.6rem;}
+	/* h5 */
+	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
+	/* 3d */
+	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) and (max-width:992px) {
+
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width:992px) and (max-width:1200px) {
+
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) and (max-width:1850px) {
+
+}
