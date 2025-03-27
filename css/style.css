@@ -53,6 +53,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:first-child{line-height: 3.125rem;}
 .top-wrap>div:last-child{width: 0.8rem;height: 0.8rem;border-radius: 100%;border: 0.0625rem solid #fff; justify-content: center;align-items: center;margin-left: 0.25rem;overflow: hidden;display: flex;}
 
+/* 遮罩 */
+.mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;}
+
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
 	/* 导航 */

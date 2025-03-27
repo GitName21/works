@@ -1,3 +1,57 @@
+// ——————————封装——————————
+function noScroll(){	//禁止屏幕滚动
+	document.body.style.overflow = 'hidden';
+	// 或通过添加CSS类（推荐）
+	document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+}
+function scroll(){	//恢复屏幕滚动
+	// 恢复滚动
+	document.body.style.overflow = 'auto';
+	// 或
+	document.body.classList.remove('no-scroll');
+}
+
+let mask = document.querySelector(".mask");
+function maskShow(){	//弹起遮罩
+	noScroll();
+	mask.style.cssText = "display: block";
+	
+	mask.animate([	//遮罩动画
+		{
+			opacity: 0
+		},{
+			opacity: 1
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+}
+function maskHide(){	//关闭遮罩
+	scroll();
+	mask.animate([	//遮罩动画
+		{
+			opacity: 1
+		},{
+			opacity: 0
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar = setTimeout(function () {
+		mask.style.cssText = "display: none";
+		clearTimeout(myVar);
+	}, 200);
+}
+mask.onclick = function(){
+	maskHide();
+}
+
+
+//——————————特效——————————
+
 let mobile_navbar_btn = document.querySelector(".mobile-navbar ul");	//移动端导航展开按钮
 
 let mobile_navbar_btn1 = document.querySelector(".mobile-navbar ul>li:first-child");	//移动端导航展开结构
@@ -15,9 +69,7 @@ let close = true;	//移动端导航栏关闭：关闭
 // 移动端导航栏
 mobile_navbar_btn.onclick = function(){
 	if(close){
-		document.body.style.overflow = 'hidden';
-		// 或通过添加CSS类（推荐）
-		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+		noScroll();
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg);top: 0.39rem;";
@@ -70,10 +122,7 @@ mobile_navbar_btn.onclick = function(){
 		
 		close = false;
 	}else{
-		// 恢复滚动
-		document.body.style.overflow = 'auto';
-		// 或
-		document.body.classList.remove('no-scroll');
+		scroll();
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
@@ -137,7 +186,7 @@ mobile_navbar_btn.onclick = function(){
 
 // PC端简历
 navbar_person.onclick = function(){
-	alert('');
+	maskShow();
 }
 
 // 返回顶部
@@ -170,4 +219,3 @@ function smoothScrollTop(duration = 800) {
 top_wrap.addEventListener('click', () => {
     smoothScrollTop(1000); // 参数控制滚动时长（单位：毫秒）
 });
-
