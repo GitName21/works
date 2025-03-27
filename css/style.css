@@ -40,6 +40,14 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 3d */
 .main-content-3d div{width: 49.5%;height: auto;margin-bottom: 1rem;}
 
+/* 感谢 */
+.thanks-wrap{width: 90%;margin: 10rem auto;}
+.thanks-title{font-size: 5rem;border-bottom: 0.0625rem solid #fff;text-transform: uppercase;}
+.thanks-menu{display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;margin-top: 1rem;}
+.thanks-menu div{letter-spacing: 0.3125rem;}
+.thanks-menu ul{display: flex;flex-wrap: nowrap;}
+.thanks-menu ul li{margin-left: 2rem;}
+
 /* 返回顶部 */
 .top-wrap{width: 35%;height: 3.125rem;border-radius: 0.5rem;background-color: rgba(255, 255, 255, 0.3);color: #fff;margin: 3.125rem auto;display: flex;justify-content: center;align-items: center;cursor: pointer;}
 .top-wrap>div:first-child{line-height: 3.125rem;}
@@ -53,7 +61,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
 	.navbar-list{flex-wrap: wrap;width: 100%;order: 1;display: none;}
-	.navbar-list>li{width: 95%;margin: 0;padding: 0.8rem 0 0.8rem 0;background-color: rgba(255, 255, 255, 0.1);border-radius: 0.625rem;margin-bottom: 0.5rem;padding-left: 5%;}
+	.navbar-list>li{width: 96%;margin: 0;padding: 0.8rem 0 0.8rem 0;background-color: rgba(255, 255, 255, 0.1);border-radius: 0.625rem;margin-bottom: 0.5rem;padding-left: 4%;}
 	
 	.mobile-navbar-title{font-size: 1.75rem;color: #fff;font-weight: bold;margin-bottom: 1rem;display: ;opacity: 1;visibility: visible;width: fit-content;transition: 0.5s all ease;}
 	/* 移动端菜单展开按钮 */
@@ -81,6 +89,13 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
 	/* 3d */
 	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
+	
+	/* 感谢 */
+	.thanks-wrap{margin: 5rem auto;}
+	.thanks-title{font-size: 4rem;}
+	.thanks-menu{display: flex;flex-wrap: wrap;}
+	.thanks-menu ul{justify-content: space-between;width: 100%;margin-top: 0.5rem;}
+	.thanks-menu ul li{margin: 0;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
