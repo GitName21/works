@@ -133,3 +133,40 @@ mobile_navbar_btn.onclick = function(){
 		close = true;
 	}
 }
+
+
+// PC端简历
+navbar_person.onclick = function(){
+	alert('');
+}
+
+// 返回顶部
+let top_wrap = document.querySelector('.top-wrap');
+// 核心滚动函数（支持自定义速度）
+function smoothScrollTop(duration = 800) {
+    const start = window.pageYOffset || document.documentElement.scrollTop;
+    const startTime = performance.now();
+
+    function scrollStep(timestamp) {
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // 缓动函数（easeOutQuad）
+        window.scrollTo(0, start - easeOutQuad(progress) * start);
+        
+        if (progress < 1) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    // 缓动函数实现
+    function easeOutQuad(t) {
+        return t * (2 - t);
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+// 点击事件绑定
+top_wrap.addEventListener('click', () => {
+    smoothScrollTop(1000); // 参数控制滚动时长（单位：毫秒）
+});
