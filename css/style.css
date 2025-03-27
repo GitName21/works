@@ -104,6 +104,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-album-2 div{width: 100%;height: auto;margin-bottom: 0.6rem;}
 	/* h5 */
 	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
+	.label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;}
 	/* 3d */
 	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
 	
