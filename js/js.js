@@ -8,6 +8,7 @@ let navbar_list = document.querySelector(".navbar-list");	//导航列表
 let navbar_person = document.querySelector(".navbar-person");	//个人
 
 let navbar_wrap = document.querySelector(".navbar-wrap");	//导航栏模块
+let navbar_wrap_hight = navbar_wrap.offsetHeight;	//导航栏模块
 
 let close = true;	//移动端导航栏关闭：关闭
 
@@ -28,12 +29,12 @@ mobile_navbar_btn.onclick = function(){
 		
 		navbar_wrap.animate([	//导航栏打开动画
 			{
-				height: '0vh'
+				height: navbar_wrap_hight + 'px'
 			},{
 				height: '100vh'
 			}
 		],{
-			duration:200,
+			duration:350,
 			fill:'forwards'
 		})
 		
