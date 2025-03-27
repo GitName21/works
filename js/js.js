@@ -170,3 +170,4 @@ function smoothScrollTop(duration = 800) {
 top_wrap.addEventListener('click', () => {
     smoothScrollTop(1000); // 参数控制滚动时长（单位：毫秒）
 });
+
