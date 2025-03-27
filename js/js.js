@@ -54,9 +54,9 @@ mask.onclick = function(){
 
 let mobile_navbar_btn = document.querySelector(".mobile-navbar ul");	//移动端导航展开按钮
 
-let mobile_navbar_btn1 = document.querySelector(".mobile-navbar ul>li:first-child");	//移动端导航展开结构
-let mobile_navbar_btn2 = document.querySelector(".mobile-navbar ul>li:nth-child(2)");	//移动端导航展开结构
-let mobile_navbar_btn3 = document.querySelector(".mobile-navbar ul>li:last-child");	//移动端导航展开结构
+let mobile_navbar_btn1 = document.querySelector(".mobile-navbar ul>li:first-child");	//移动端导航展开结构-上横线
+let mobile_navbar_btn2 = document.querySelector(".mobile-navbar ul>li:nth-child(2)");	//移动端导航展开结构-中横线
+let mobile_navbar_btn3 = document.querySelector(".mobile-navbar ul>li:last-child");		//移动端导航展开结构-下横线
 
 let navbar_list = document.querySelector(".navbar-list");	//导航列表
 let navbar_person = document.querySelector(".navbar-person");	//个人
@@ -90,7 +90,7 @@ mobile_navbar_btn.onclick = function(){
 			fill:'forwards'
 		})
 		
-		navbar_list.animate([	//导航栏打开动画
+		navbar_list.animate([	//导航栏打开，菜单缓动动画
 			{
 				visibility: 'visible',
 				transform: 'translateY(-1rem)',
@@ -105,7 +105,7 @@ mobile_navbar_btn.onclick = function(){
 			fill:'forwards'
 		})
 		
-		navbar_person.animate([	//头像打开动画
+		navbar_person.animate([	//头像打开缓动动画
 			{
 				visibility: 'visible',
 				transform: 'translateY(-1rem)',
@@ -142,7 +142,7 @@ mobile_navbar_btn.onclick = function(){
 			fill:'forwards'
 		})
 		
-		navbar_list.animate([	//导航栏打开动画
+		navbar_list.animate([	//导航栏关闭菜单缓动动画
 			{
 				visibility: 'visible',
 				transform: 'translateY(0rem)',
@@ -156,7 +156,7 @@ mobile_navbar_btn.onclick = function(){
 			duration:300,
 			fill:'forwards'
 		})
-		navbar_person.animate([	//头像打开动画
+		navbar_person.animate([	//头像关闭缓动动画
 			{
 				visibility: 'visible',
 				transform: 'translateY(0rem)',
@@ -172,7 +172,7 @@ mobile_navbar_btn.onclick = function(){
 		})
 		
 		// 设置一个定时器
-		var myVar = setTimeout(function () {
+		var myVar = setTimeout(function () {	//动画完全执行完后隐藏元素
 			navbar_list.style.cssText = "display: none";
 			navbar_person.style.cssText = "display: none";
 			
