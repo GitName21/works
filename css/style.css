@@ -21,6 +21,20 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 移动端菜单展开按钮 */
 .mobile-navbar{display: none;-webkit-tap-highlight-color:transparent;}
 
+/* 封面 */
+.cover-wrap{width: 90%;height: auto;margin: 0 auto 8rem auto;color: #fff;}
+.cover-addr{width: 100%;text-align: right;margin: 2rem 0;border-left: 0.125rem solid #fff;}
+.cover-addr p:first-child{font-weight: bold;}
+.cover-addr p:last-child{font-size: 0.75rem;color: #a7a7a7;}
+.cover-title{font-size: 3.5rem;font-weight: bold;text-transform: uppercase;margin: 5rem 0 1rem 0;position: relative;}
+.cover-title::before{width: 0.0625rem;height: 100%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(45deg);top: 0;}
+.cover-title::after{width: 0.0625rem;height: 100%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(-45deg);top: 0;}
+.cover-title-en{font-size: 0.625rem;color: #515151;text-transform: uppercase;}
+.cover-email{width: 13rem;height: 2.8rem;border-radius: 62.5rem;border: 0.125rem solid #fff;display: flex;justify-content: center;align-items: center;margin: 2rem 0;}
+.cover-icon{width: 1.25rem;height: 20px;display: flex;justify-content: center;align-items: center;margin-right: 0.5rem;}
+.cover-code{width: 2.8rem;height: 2.8rem;border-radius: 50%;border: 0.125rem solid #fff;margin: 0 0 0 0.5rem;display: flex;justify-content: center;align-items: center;}
+.cover-contact{display: flex;flex-wrap: nowrap;align-items: center;}
+
 /* 主题内容 */
 .main{width:100%;height: auto;color: #fff;}
 .main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
@@ -99,6 +113,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.thanks-menu{display: flex;flex-wrap: wrap;}
 	.thanks-menu ul{justify-content: space-between;width: 100%;margin-top: 0.5rem;}
 	.thanks-menu ul li{margin: 0;}
+	
+	/* 封面 */
+	.cover-wrap{margin: 0 auto 5rem auto;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
