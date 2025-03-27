@@ -117,6 +117,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	
 	/* 封面 */
 	.cover-wrap{margin: 0 auto 5rem auto;}
+	.cover-title{margin: 3rem 0 1rem 0;}
+	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
+	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
+	.cover-contact{justify-content: center;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
