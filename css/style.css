@@ -72,7 +72,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 返回顶部 */
 .top-wrap{width: 35%;height: 3.125rem;border-radius: 0.5rem;background-color: rgba(255, 255, 255, 0.3);color: #fff;margin: 3.125rem auto;display: flex;justify-content: center;align-items: center;cursor: pointer;}
 .top-wrap>div:first-child{line-height: 3.125rem;}
-.top-wrap>div:last-child{width: 0.7rem;height: 0.7rem;border-radius: 100%;border: 1.5px solid #fff; justify-content: center;align-items: center;margin-left: 0.5rem;overflow: hidden;display: flex;}
+.top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0.05rem 0 0 0.3rem;overflow: hidden;display: flex;}
 
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;}
