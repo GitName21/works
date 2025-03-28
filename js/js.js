@@ -281,6 +281,7 @@ cover_code.addEventListener('click', () => {
 mask.onclick = function(){
 	maskHide();
 	
+	// 二维码关闭动画
 	mobile_code.animate([	//动画
 		{
 			opacity: 1,
@@ -297,5 +298,6 @@ mask.onclick = function(){
 	var myVar = setTimeout(function () {
 		mobile_code.style.cssText = "transform:translate3d(0,0,0),display: none";
 		clearTimeout(myVar);
-	}, 200);
+	}, 300);
+	
 }
