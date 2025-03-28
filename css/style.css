@@ -96,7 +96,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-navbar>ul>li:nth-child(2){top: 0.39rem;}
 	.mobile-navbar>ul>li:last-child{bottom: 0;}
 	/* 头像 */
-	.navbar-person{width: 100%;display: flex;flex-direction: row-reverse;display: none;}
+	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 3rem;margin: 0 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
 	
 	/* 主题 */
 	.main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;text-transform: uppercase;}
