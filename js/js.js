@@ -183,7 +183,8 @@ mobile_navbar_btn.onclick = function(){
 
 
 // PC端简历
-navbar_person.onclick = function(){
+navbar_person_head = document.querySelector('.navbar-person-head');
+navbar_person_head.onclick = function(){
 	maskShow();
 }
 
