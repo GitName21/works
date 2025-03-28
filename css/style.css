@@ -75,7 +75,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0 0 0 0.3rem;overflow: hidden;display: flex;}
 
 /* 简历 */
-.biographical-notes-wrap{width: 70%;height: 65vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: block;background: #fff url("../img/bio-bg.png") repeat left top / auto;flex-wrap: wrap;align-content: flex-start;}
+.biographical-notes-wrap{width: 70%;height: 65vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;background: #fff url("../img/bio-bg.png") repeat left top / auto;flex-wrap: wrap;align-content: flex-start;}
 .hello{width: 100%;height: auto;}
 .hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
