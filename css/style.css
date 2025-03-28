@@ -74,6 +74,44 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:first-child{line-height: 3.125rem;}
 .top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0 0 0 0.3rem;overflow: hidden;display: flex;}
 
+/* 简历 */
+.biographical-notes-wrap{width: 70%;height: 37.5rem;margin-left: 13.5%;position: fixed;bottom:2rem;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;background: #fff url("../img/bio-bg.png") repeat left top / auto;flex-wrap: wrap;align-content: flex-start;}
+.hello{width: 100%;height: auto;}
+.hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
+.hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
+.hello>div:first-child>div:last-child{font-weight: bold;margin-bottom: 0.2rem;}
+.bio-code{background-color: #252525;width:auto;height: 2.5rem;color: #fff;text-transform: uppercase;font-size: 1.75rem;font-weight: bold;padding-left: 0.5rem;border-radius: 0.3125rem;margin-top: 0.5rem;position: relative;}
+.bio-code-img{position: absolute;right:1rem;top:-1.5rem;background-color: #fff;width: 5rem;height: 5rem;border: 0.3rem solid #252525;}
+.bio-code-img img{width: 100%;height: auto;}
+.bio-code-img::before{position: absolute;content: '添加微信';bottom: -1.6rem;width: 100%;text-align: center;font-size: 0.875rem;color: #252525;font-weight: normal;}
+.bio-cont-wrap{width: 100%;height:auto;margin-top: 3.5rem;display: flex;flex-wrap: nowrap;justify-content: space-between;}
+.bio-cont-wrap>div{height: auto;}
+.bio-cont-wrap-left{width: 22%;}
+.bio-cont-wrap-right{width: 68%;}
+.bio-cont-head{width: 7rem;height: auto;background-color: #fff;margin-top: 0.5rem;overflow: hidden;}
+.bio-cont-head img{width: 100%;height: auto;}
+/* 介绍 */
+.bio-cont-about{width: 100%;height: auto;display: flex;flex-wrap: nowrap;justify-content: space-between;}
+.bio-cont-about-text{font-size: 0.75rem;margin-top: 1rem;}
+.bio-cont-about-line{width: 0.0625rem;height:50%;background-color: #a7a7a7;margin:1.5rem 0 0 0.5rem;}
+/* 技能 */
+.bio-skill-wrap{width: 100%;height: auto;display: flex;justify-content: space-between;flex-wrap: nowrap;color: #252525;margin: 2rem 0 0 0;}
+.bio-skill-cont{display: flex;flex-wrap: nowrap;align-items: center;}
+.bio-skill-cont>div:first-child{width: 8rem;}
+.bio-skill-cont>div:last-child{height: 0.5rem;background-color: #252525;margin-left: 0.5rem;}
+.bio-skill-ps{width: 10rem;}
+.bio-skill-ai{width: 8rem;}
+.bio-skill-c4d{width: 9rem;}
+.bio-skill-web{width: 10rem;}
+/* 经历 */
+.bio-skill-experience{margin-top: 4rem;display: flex;flex-wrap: nowrap;justify-content: space-between;}
+.bio-skill-experience>div:first-child{width: 8.5rem;}
+.bio-skill-experience-cont-tab{display: flex;flex-wrap: nowrap;justify-content: space-between;width: 100%;margin-bottom: 2rem;}
+.bio-skill-experience-cont-text{width: 65%;}
+.bio-skill-experience-cont{display: flex;flex-wrap: wrap;width: 100%;}
+/* 底下 */
+.bio-footer{width: 100%;height: 0.3125rem;background-color: #252525;display: flex;}
+
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;}
 
@@ -140,6 +178,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code div{display: flex;justify-content: center;flex-wrap: wrap;}
 	.mobile-code div:last-child{margin-top: 1rem;}
 	.mobile-code img{width: 40%;height: auto;}
+	
+	/* 简历 */
+	/* .biographical-notes-wrap{display: none;} */
 }
 
 /* 小屏幕（平板，大于等于 768px） */

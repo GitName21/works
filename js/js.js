@@ -184,8 +184,24 @@ mobile_navbar_btn.onclick = function(){
 
 // PC端简历
 navbar_person_head = document.querySelector('.navbar-person-head');
+const biographical_notes = document.querySelector('.biographical-notes-wrap');
 navbar_person_head.onclick = function(){
 	maskShow();
+	
+	biographical_notes.style.cssText = "display: flex";
+	
+	biographical_notes.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
 }
 
 // 返回顶部
@@ -317,4 +333,22 @@ mask.onclick = function(){
 		clearTimeout(myVar);
 	}, 300);
 	
+	// 简历关闭
+	biographical_notes.animate([	//动画
+		{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar_bio = setTimeout(function () {
+		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
+		clearTimeout(myVar_bio);
+	}, 300);
 }
