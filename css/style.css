@@ -13,6 +13,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 头像 */
 .navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
 .navbar-person-head-1{width: 1.5rem;height: 1.5rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
+.mobile-person-btn{display: none;}
 /* 列表 */
 .navbar-list{display: flex;flex-wrap: nowrap;}
 .navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;color: #a7a7a7;}
@@ -96,10 +97,16 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-navbar>ul>li:nth-child(2){top: 0.39rem;}
 	.mobile-navbar>ul>li:last-child{bottom: 0;}
 	/* 头像 */
-	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 3rem;margin: 0 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
+	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 4rem;margin: 0 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
+	.mobile-person-btn{display: block;color:#fff;display: flex;justify-content: space-between;align-items: center;width: 90%;}
+	.mobile-person-menu{display: flex;flex-wrap: nowrap;align-items: center;font-size: 0.75rem;}
+	.mobile-person-menu div{display: flex;align-items: center;margin-left: 0.8rem;}
+	.mobile-person-menu svg{margin-left: 0.2rem;}
+	.mobile-person-name p:last-child{font-size: 0.75rem;color: #a7a7a7;}
+	.mobile-person-name{line-height: 1rem;margin-left: 0.5rem;}
 	
 	/* 主题 */
-	.main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;text-transform: uppercase;}
+	.main-title{flex-wrap: wrap;justify-content: center;}
 	.main-separate{margin: 0 0.5rem;}
 	.main-line{margin: 0.5rem 0 0rem 0;opacity: 0.25;}
 	.main-circular{display: none;}
