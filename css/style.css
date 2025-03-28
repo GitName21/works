@@ -32,8 +32,14 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .cover-title-en{font-size: 0.625rem;color: #515151;text-transform: uppercase;}
 .cover-email{width: 13rem;height: 2.8rem;border-radius: 62.5rem;border: 0.125rem solid #fff;display: flex;justify-content: center;align-items: center;margin: 2rem 0;}
 .cover-icon{width: 1.25rem;height: 20px;display: flex;justify-content: center;align-items: center;margin-right: 0.5rem;}
-.cover-code{width: 2.8rem;height: 2.8rem;border-radius: 50%;border: 0.125rem solid #fff;margin: 0 0 0 0.5rem;display: flex;justify-content: center;align-items: center;}
+.cover-code{width: 2.8rem;height: 2.8rem;border-radius: 50%;border: 0.125rem solid #fff;margin: 0 0 0 0.5rem;display: flex;justify-content: center;align-items: center;cursor: pointer;position: relative;}
+.cover-code-img img{width: 95%;height: auto;}
+.cover-code-img{position: absolute;width: 8rem;height: 8rem;background-color: #fff;bottom: -9rem;right:-5rem;border-radius: 5px;display: flex;justify-content: center;align-items: center;transition: all 0.25s ease;opacity: 0;transform: scale(0.9) translateY(-20px);visibility: hidden;}
+.cover-code-img::after{border-bottom: 8px solid #fff;border-left: 8px solid transparent;border-right: 8px solid transparent;position: absolute;content: '';top: -8px;left: 1rem;}
+.cover-code:hover .cover-code-img{opacity: 1;transform: scale(1)  translateY(0);visibility: visible;}
 .cover-contact{display: flex;flex-wrap: nowrap;align-items: center;}
+.mobile-code{display: none;}
+
 
 /* 主题内容 */
 .main{width:100%;height: auto;color: #fff;}
@@ -121,6 +127,12 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
 	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
 	.cover-contact{justify-content: center;}
+	.cover-code-img{display: none;}
+	/* 二维码 */
+	.mobile-code{width: 90%;height: auto;background-color: #fff;position: fixed;display: flex;bottom: 2.5rem;left: 5%;justify-content: center;align-items: center;padding: 5rem 0;border-radius: 1.25rem;flex-wrap: wrap;display: none;}
+	.mobile-code div{display: flex;justify-content: center;}
+	.mobile-code div:last-child{margin-top: 1rem;}
+	.mobile-code img{width: 40%;height: auto;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */

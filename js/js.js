@@ -45,9 +45,7 @@ function maskHide(){	//关闭遮罩
 		clearTimeout(myVar);
 	}, 200);
 }
-mask.onclick = function(){
-	maskHide();
-}
+
 
 
 //——————————特效——————————
@@ -219,3 +217,85 @@ function smoothScrollTop(duration = 800) {
 top_wrap.addEventListener('click', () => {
     smoothScrollTop(1000); // 参数控制滚动时长（单位：毫秒）
 });
+
+
+// 移动端二维码弹窗
+let cover_code = document.querySelector('.cover-code');
+
+// 不包含滚动条的视口尺寸（兼容旧浏览器）
+const clientWidth = document.documentElement.clientWidth;  // 如 1184px（减去滚动条16px）
+const clientHeight = document.documentElement.clientHeight;
+// console.log('屏幕宽'+clientWidth,'屏幕高'+clientHeight)
+
+let mobile_code = document.querySelector('.mobile-code');
+cover_code.addEventListener('click', () => {
+	maskShow();
+	
+	mobile_code.style.cssText = "display: flex";
+	
+	mobile_code.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 错误一
+	// const cover_code_location = cover_code.getBoundingClientRect();
+	// // 相对于浏览器窗口左上角的坐标
+	// const cover_code_location_left = cover_code_location.left;   // 元素左侧到视口左侧的距离
+	// const cover_code_location_top = cover_code_location.top;     // 元素顶部到视口顶部的距离
+	// // console.log('左'+cover_code_location_left,'上'+cover_code_location_top)
+	
+	// cover_code.style.cssText = "position:fixed;z-index:999;border:0;background-color:#fff;left:" + cover_code_location_left + "px;" + "top:" + cover_code_location_top + "px";
+	
+
+	
+	// cover_code.animate([	//头像关闭缓动动画
+	// 	{
+	// 		width: '2.8rem',
+	// 		height:'2.8rem',
+	// 		borderRadius:'8px',
+	// 	},{
+	// 		width: '220px',
+	// 		height:'220px',
+	// 		borderRadius:'8px',
+	// 		left:(clientWidth-220)/2-10 + 'px',
+	// 		top: (clientHeight-220)/2 + 'px',
+	// 	}
+	// ],{
+	// 	duration:300,
+	// 	fill:'forwards'
+	// })
+	//——————————————————————————————————————————————————————————————————————————————————
+	
+	
+});
+
+// 关闭
+mask.onclick = function(){
+	maskHide();
+	
+	mobile_code.animate([	//动画
+		{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar = setTimeout(function () {
+		mobile_code.style.cssText = "transform:translate3d(0,0,0),display: none";
+		clearTimeout(myVar);
+	}, 200);
+}
