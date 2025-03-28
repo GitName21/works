@@ -44,7 +44,69 @@ function maskHide(){	//关闭遮罩
 		mask.style.cssText = "display: none";
 		clearTimeout(myVar);
 	}, 200);
+	
+	
+	
+	// // 导航栏按钮动画
+	// mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
+	// mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
+	// mobile_navbar_btn3.style.cssText = "opacity: 1";
+	
+	// navbar_wrap.animate([	//导航栏打开动画
+	// 	{
+	// 		height: '100vh',
+	// 	},{
+	// 		height: '3.5rem',
+	// 	},{
+	// 		height: 'auto',
+	// 	}
+	// ],{
+	// 	duration:300,
+	// 	fill:'forwards'
+	// })
+	
+	// navbar_list.animate([	//导航栏关闭菜单缓动动画
+	// 	{
+	// 		visibility: 'visible',
+	// 		transform: 'translateY(0rem)',
+	// 		opacity: 1
+	// 	},{
+	// 		visibility: 'visible',
+	// 		transform: 'translateY(-1rem)',
+	// 		opacity: 0
+	// 	},
+	// ],{
+	// 	duration:300,
+	// 	fill:'forwards'
+	// })
+	// navbar_person.animate([	//头像关闭缓动动画
+	// 	{
+	// 		visibility: 'visible',
+	// 		transform: 'translateY(0rem)',
+	// 		opacity: 1
+	// 	},{
+	// 		visibility: 'visible',
+	// 		transform: 'translateY(-1rem)',
+	// 		opacity: 0
+	// 	}
+	// ],{
+	// 	duration:300,
+	// 	fill:'forwards'
+	// })
+	
+	// // 设置一个定时器
+	// var myVar_nav = setTimeout(function () {	//动画完全执行完后隐藏元素
+	// 	navbar_list.style.cssText = "display: none";
+	// 	navbar_person.style.cssText = "display: none";
+		
+	// 	clearTimeout(myVar_nav);
+	// }, 200);
+	
+	// close = true;
+	
 }
+
+
 
 
 
@@ -351,4 +413,10 @@ mask.onclick = function(){
 		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
 		clearTimeout(myVar_bio);
 	}, 300);
+	if(!close){	//解决已导航栏开关冲突问题
+		document.body.style.overflow = 'hidden';
+		// 或通过添加CSS类（推荐）
+		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+	}
+	
 }
