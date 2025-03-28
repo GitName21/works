@@ -275,8 +275,24 @@ cover_code.addEventListener('click', () => {
 	// })
 	//——————————————————————————————————————————————————————————————————————————————————
 	
-	
 });
+// 二维码弹窗文案,微信浏览器与其它浏览器文案不一样
+// 判断是否为微信浏览器
+let mobile_code_cont = document.querySelector('.mobile-code div:last-child');
+function isWechatBrowser() {
+  // 通过用户代理关键词 "MicroMessenger" 检测
+  const ua = navigator.userAgent.toLowerCase();
+  return ua.indexOf('micromessenger') !== -1;
+}
+// 使用示例
+if (isWechatBrowser()) {
+  console.log("当前运行在微信浏览器中");
+  // 可在此触发微信相关逻辑（如隐藏下载按钮、提示用户用浏览器打开等）
+  mobile_code_cont.innerHTML='长按扫描二维码';
+} else {
+  console.log("当前不在微信浏览器中");
+  mobile_code_cont.innerHTML = "长按保存二维码";
+}
 
 // 关闭
 mask.onclick = function(){
