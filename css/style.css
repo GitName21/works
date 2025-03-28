@@ -180,7 +180,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code img{width: 40%;height: auto;}
 	
 	/* 简历 */
-	/* .biographical-notes-wrap{display: none;} */
+	.biographical-notes-wrap{width: 80%;height: 85vh;margin-left: 5%;bottom:3vh;padding: 5%;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
