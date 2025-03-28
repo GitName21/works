@@ -75,7 +75,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0 0 0 0.3rem;overflow: hidden;display: flex;}
 
 /* 简历 */
-.biographical-notes-wrap{width: 70%;height: 65vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;background: #fff url("../img/bio-bg.png") repeat left top / auto;flex-wrap: wrap;align-content: flex-start;}
+.biographical-notes-wrap{width: 70%;height: 65vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: block;background: #fff url("../img/bio-bg.png") repeat left top / auto;flex-wrap: wrap;align-content: flex-start;}
 .hello{width: 100%;height: auto;}
 .hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
@@ -180,7 +180,19 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code img{width: 40%;height: auto;}
 	
 	/* 简历 */
-	.biographical-notes-wrap{width: 80%;height: 85vh;margin-left: 5%;bottom:3vh;padding: 5%;}
+	.biographical-notes-wrap{width: 80%;height: 85vh;margin-left: 5%;bottom:3vh;padding: 5%;overflow: scroll;}
+	.bio-code-img{display: none;}
+	.bio-cont-wrap{flex-wrap: wrap;}
+	.bio-cont-wrap-left{width: 100%;}
+	.bio-cont-wrap-right{width: 100%;}
+	.bio-skill-wrap{flex-wrap: wrap;}
+	.bio-skill-wrap>div:first-child{margin: 0 0 1rem 0;}
+	.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;}
+	.bio-skill-experience>div:first-child{margin-bottom: 1rem;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 100%;}
+	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
+	.bio-skill-experience-cont-text>p:last-child{line-height: 1rem;margin:1rem 0 0 0;}
+	
 }
 
 /* 小屏幕（平板，大于等于 768px） */
