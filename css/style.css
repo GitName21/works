@@ -98,11 +98,11 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-skill-wrap{width: 100%;height: auto;display: flex;justify-content: space-between;flex-wrap: nowrap;color: #252525;margin: 2rem 0 0 0;}
 .bio-skill-cont{display: flex;flex-wrap: nowrap;align-items: center;}
 .bio-skill-cont>div:first-child{width: 8rem;}
-.bio-skill-cont>div:last-child{height: 0.5rem;background-color: #252525;margin-left: 0.5rem;}
-.bio-skill-ps{width: 10rem;}
-.bio-skill-ai{width: 8rem;}
-.bio-skill-c4d{width: 9rem;}
-.bio-skill-web{width: 10rem;}
+.bio-skill-cont>div:last-child{height: 0.5rem;margin-left: 0.5rem;}
+.bio-skill-ps{width: 10rem;background-color: #31a7fe;}
+.bio-skill-ai{width: 8rem;background-color: #ff9a00;}
+.bio-skill-c4d{width: 9rem;background-color: #7137d0;}
+.bio-skill-web{width: 10rem;background-color: #37d08a;}
 /* 经历 */
 .bio-skill-experience{margin-top: 4rem;display: flex;flex-wrap: nowrap;justify-content: space-between;}
 .bio-skill-experience>div:first-child{width: 8.5rem;}
