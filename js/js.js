@@ -265,6 +265,27 @@ navbar_person_head.onclick = function(){
 		fill:'forwards'
 	})
 }
+// 移动简历
+const mobile_person_look = document.querySelector('.mobile-person-look');
+// 给触发元素绑定点击事件
+mobile_person_look.addEventListener('click', function(event) {
+	maskShow();
+	
+	biographical_notes.style.cssText = "display: flex";
+	
+	biographical_notes.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+});
 
 // 返回顶部
 let top_wrap = document.querySelector('.top-wrap');
