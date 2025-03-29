@@ -194,13 +194,15 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;}
 	.bio-cont-wrap-left{width: 100%;}
 	.bio-cont-wrap-right{width: 100%;}
+	.bio-cont-about-text{background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;line-height: 1.35rem;}
 	.bio-skill-wrap{flex-wrap: wrap;}
 	.bio-skill-wrap>div:first-child{margin: 0 0 1rem 0;display: flex;flex-wrap: nowrap;}
 	.bio-skill-wrap>div:first-child>p:first-child{margin-right: 0.5rem;}
 	.bio-skill-wrap>div:first-child>p:last-child{color: #b9b9b9;}
+	.bio-skill-wrap>div{width: 100%;}
 	.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
 	.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
-	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 97%;border-left: 0.0625rem solid #000;padding: 3%;margin-bottom: 0;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 97%;margin-bottom: 0.5rem;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;}
 	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
 	.bio-skill-experience-cont-text>p:last-child{line-height: 1rem;margin:1rem 0 0 0;}
 	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;}
@@ -208,9 +210,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
 	.bio-skill-experience>div:first-child>p:first-child{margin-right: 0.5rem;}
 	.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
+	.bio-skill-cont{padding: 3.5%;background-color: #fff;width: 93%;margin-bottom: 0.5rem;border-radius: 0.3125rem;}
 	/* 时间 */
-	.bio-skill-experience-cont-time{position: relative;}
-	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;}
+/* 	.bio-skill-experience-cont-time{position: relative;}
+	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
 	/* 联系 */
 	.bio-contact-title{display: flex;flex-wrap: nowrap;}
 	.bio-contact-title>P:first-child{margin-right: 0.5rem;}
