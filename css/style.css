@@ -88,7 +88,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-cont-wrap>div{height: auto;}
 .bio-cont-wrap-left{width: 22%;}
 .bio-cont-wrap-right{width: 68%;}
-.bio-cont-head{width: 7rem;height: auto;background-color: #fff;margin-top: 0.5rem;overflow: hidden;}
+.bio-cont-head{width: 6rem;height: auto;background-color: #fff;margin-top: 0.5rem;overflow: hidden;border: #fff solid 0.3125rem;}
 .bio-cont-head img{width: 100%;height: auto;}
 /* 介绍 */
 .bio-cont-about{width: 100%;height: auto;display: flex;flex-wrap: nowrap;justify-content: space-between;}
@@ -113,6 +113,13 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-skill-experience-cont{display: flex;flex-wrap: wrap;width: 100%;}
 /* 底下 */
 .bio-footer{width: 100%;height: 0.3125rem;background-color: #252525;display: flex;}
+/* 联系 */
+.bio-contact{width: 100%;height: auto;margin: 2rem 0 0 0;}
+.bio-contact-menu{width: 93%;flex-wrap: nowrap;align-items: center;display: flex;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;margin-bottom: 0.5rem;}
+.bio-contact-menu-icon{width:1.5rem;height: 1.5rem;background-color: #000;border-radius: 100%;margin-right: 0.25rem;display: flex;justify-content: center;align-items: center;}
+.bio-contact-title{margin-bottom: 1rem;}
+.bio-contact-title>P:first-child{font-weight: bold;}
+.bio-contact-title>P:last-child{color: #252525;}
 
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;}
@@ -204,7 +211,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 时间 */
 	.bio-skill-experience-cont-time{position: relative;}
 	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;}
-	
+	/* 联系 */
+	.bio-contact-title{display: flex;flex-wrap: nowrap;}
+	.bio-contact-title>P:first-child{margin-right: 0.5rem;}
+	.bio-contact-title>P:last-child{color: #b9b9b9;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
