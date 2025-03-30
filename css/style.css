@@ -75,7 +75,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0 0 0 0.3rem;overflow: hidden;display: flex;}
 
 /* 简历 */
-.biographical-notes-wrap{width: 70%;height: 65vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;/* background: #fff url("../img/bio-bg.png") repeat left top / auto; */flex-wrap: wrap;align-content: flex-start;background: linear-gradient(180deg, rgba(230, 239, 254, 1) 0%, rgba(255, 249, 253, 1) 100%);}
+.biographical-notes-wrap{width: 70%;height: 70vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;/* background: #fff url("../img/bio-bg.png") repeat left top / auto; */flex-wrap: wrap;align-content: flex-start;background: linear-gradient(180deg, rgba(230, 239, 254, 1) 0%, rgba(255, 249, 253, 1) 100%);}
 .hello{width: 100%;height: auto;}
 .hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
@@ -113,7 +113,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-skill-experience-cont-text>p:last-child{margin-top: 1rem;}
 .bio-skill-experience-cont{display: flex;flex-wrap: wrap;width: 100%;}
 /* 底下 */
-.bio-footer{width: 100%;height: 0.3125rem;background-color: #252525;display: flex;}
+.bio-footer{width: 100%;height: auto;background-color: #252525;display: flex;line-height: 3rem;text-align: center;color:#fff;border-radius: 0.3125rem;}
+.bio-footer-tips{text-align: center;width: 100%;text-align: center;color: #c1c1c1;font-size: 0.75rem;margin-top: 0.5rem;}
 /* 联系 */
 .bio-contact{width: 100%;height: auto;margin: 2rem 0 0 0;}
 .bio-contact-menu{width: 93%;flex-wrap: nowrap;align-items: center;display: flex;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;margin-bottom: 0.5rem;}
@@ -203,7 +204,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-wrap>div{width: 100%;}
 	.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
 	.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
-	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 97%;margin-bottom: 0.5rem;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;}
 	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
 	.bio-skill-experience-cont-text>p:last-child{line-height: 1rem;margin:1rem 0 0 0;}
 	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;}
