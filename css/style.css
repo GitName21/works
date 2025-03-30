@@ -59,7 +59,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* h5 */
 .main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
 /* 3d */
-.main-content-3d div{width: 49.5%;height: auto;margin-bottom: 1rem;}
+.main-content-3d div{width: 33%;height: auto;margin-bottom: 0.5rem;}
 
 /* 感谢 */
 .thanks-wrap{width: 90%;margin: 10rem auto;}
@@ -129,7 +129,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
 	/* 导航 */
-	.navbar-wrap{background-color: #090A07;}
+	.navbar-wrap{background-color: #101010;}
 	/* 菜单内容 */
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
