@@ -218,7 +218,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
 	.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
 	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
-	.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;}
+	.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;display: none;}
 	.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
 	.bio-skill-experience>div:first-child>p:first-child{margin-right: 0.5rem;}
 	.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
