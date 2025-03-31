@@ -230,6 +230,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-contact-title{display: flex;flex-wrap: nowrap;}
 	.bio-contact-title>P:first-child{margin-right: 0.5rem;}
 	.bio-contact-title>P:last-child{color: #b9b9b9;}
+	
+	/* 底下 */
+	.bio-footer{width: 93%;margin: auto;}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
