@@ -50,11 +50,11 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-circular{width: 0.875rem;height: 0.875rem;border-radius: 100%;border:0.125rem solid #fff;}
 /* 内容 */
 .main-content{width: 90%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
-.main-content-personal div{width: 19.8%;height: auto;margin-bottom: 0.25rem;}
+.main-content-personal div{width: 10%;height: auto;margin-bottom: 0rem;}
 .main-content div img{width: 100%;height: auto;transition: all 0.3s ease;}
 /* 画册排版 */
 .main-content-album div{width: 33%;height: auto;margin-bottom: 0.6rem;}
-.main-content-album-1 div{width:100%;height: auto;margin-bottom: 0.6rem;}
+.main-content-album-1 div{width:49.75%;height: auto;margin-bottom: 0.6rem;}
 .main-content-album-2 div{width: 33%;height: auto;margin-bottom: 0.6rem;}
 /* h5 */
 .main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
