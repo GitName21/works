@@ -9,7 +9,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 导航 */
 .navbar-wrap{width: 100%;height: auto;}
 /* 菜单内容 */
-.navbar-box{width: 90%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
+.navbar-box{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
 /* 头像 */
 .navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
 .navbar-person-head-1{width: 1.5rem;height: 1.5rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
@@ -23,7 +23,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .mobile-navbar{display: none;-webkit-tap-highlight-color:transparent;}
 
 /* 封面 */
-.cover-wrap{width: 90%;height: auto;margin: 0 auto 8rem auto;color: #fff;}
+.cover-wrap{width: 85%;height: auto;margin: 0 auto 8rem auto;color: #fff;}
 .cover-addr{width: 100%;text-align: right;margin: 2rem 0;border-left: 0.125rem solid #fff;}
 .cover-addr p:first-child{font-weight: bold;}
 .cover-addr p:last-child{font-size: 0.75rem;color: #a7a7a7;}
@@ -44,12 +44,12 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 主题内容 */
 .main{width:100%;height: auto;color: #fff;}
-.main-title{width: 90%;height: auto;margin: 2rem auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
+.main-title{width: 85%;height: auto;margin: 2rem auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
 .main-separate{width: 0.0625rem;height: 0.875rem;background-color: #ffffff;}
 .main-line{width: 67rem;height: 0.0625rem;background-color: #fff;}
 .main-circular{width: 0.875rem;height: 0.875rem;border-radius: 100%;border:0.125rem solid #fff;}
 /* 内容 */
-.main-content{width: 90%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.main-content{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
 .main-content-personal div{width: 10%;height: auto;margin-bottom: 0rem;}
 .main-content div img{width: 100%;height: auto;transition: all 0.3s ease;}
 /* 画册排版 */
@@ -62,7 +62,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-content-3d div{width: 33%;height: auto;margin-bottom: 0.5rem;}
 
 /* 感谢 */
-.thanks-wrap{width: 90%;margin: 10rem auto;}
+.thanks-wrap{width: 85%;margin: 10rem auto;}
 .thanks-title{font-size: 5rem;border-bottom: 0.0625rem solid #fff;text-transform: uppercase;}
 .thanks-menu{display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;margin-top: 1rem;}
 .thanks-menu div{letter-spacing: 0.3125rem;}
@@ -155,11 +155,12 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-person-name{line-height: 1rem;margin-left: 0.5rem;}
 	
 	/* 主题 */
-	.main-title{flex-wrap: wrap;justify-content: center;}
+	.main-title{flex-wrap: wrap;justify-content: center;width: 90%;}
 	.main-separate{margin: 0 0.5rem;}
 	.main-line{margin: 0.5rem 0 0rem 0;opacity: 0.25;}
 	.main-circular{display: none;}
 	/* 内容 */
+	.main-content{width: 90%;}
 	.main-content-personal div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
 	/* 画册排版 */
 	.main-content-album div{width: 100%;height: auto;margin-bottom: 0.6rem;}
@@ -171,14 +172,14 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
 	
 	/* 感谢 */
-	.thanks-wrap{margin: 5rem auto;}
+	.thanks-wrap{margin: 5rem auto;width: 90%;}
 	.thanks-title{font-size: 4rem;}
 	.thanks-menu{display: flex;flex-wrap: wrap;}
 	.thanks-menu ul{justify-content: space-between;width: 100%;margin-top: 0.5rem;}
 	.thanks-menu ul li{margin: 0;}
 	
 	/* 封面 */
-	.cover-wrap{margin: 0 auto 5rem auto;}
+	.cover-wrap{margin: 0 auto 5rem auto;width: 90%;}
 	.cover-title{margin: 3rem 0 1rem 0;}
 	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
 	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
