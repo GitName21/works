@@ -116,7 +116,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-skill-experience>div:first-child>p:first-child{font-weight: bold;}
 .bio-skill-experience-cont-tab{display: flex;flex-wrap: nowrap;justify-content: space-between;width: 100%;margin-bottom: 2rem;color: #252525;}
 .bio-skill-experience-cont-text{width: 65%;}
-.bio-skill-experience-cont-text>p:last-child{margin-top: 1rem;}
+.bio-skill-experience-cont-text>p:last-child{margin-top: 1rem;line-height: 1.25rem;}
 .bio-skill-experience-cont{display: flex;flex-wrap: wrap;width: 100%;}
 /* 底下 */
 .bio-footer{width: 100%;height: auto;background-color: #252525;display: flex;line-height: 3rem;text-align: center;color:#fff;border-radius: 0.3125rem;}
@@ -216,7 +216,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
 	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;}
 	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
-	.bio-skill-experience-cont-text>p:last-child{line-height: 1rem;margin:1rem 0 0 0;}
+	.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
 	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
 	.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;}
 	.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
