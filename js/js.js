@@ -45,65 +45,6 @@ function maskHide(){	//关闭遮罩
 		clearTimeout(myVar);
 	}, 200);
 	
-	
-	
-	// // 导航栏按钮动画
-	// mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
-	// mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
-	// mobile_navbar_btn3.style.cssText = "opacity: 1";
-	
-	// navbar_wrap.animate([	//导航栏打开动画
-	// 	{
-	// 		height: '100vh',
-	// 	},{
-	// 		height: '3.5rem',
-	// 	},{
-	// 		height: 'auto',
-	// 	}
-	// ],{
-	// 	duration:300,
-	// 	fill:'forwards'
-	// })
-	
-	// navbar_list.animate([	//导航栏关闭菜单缓动动画
-	// 	{
-	// 		visibility: 'visible',
-	// 		transform: 'translateY(0rem)',
-	// 		opacity: 1
-	// 	},{
-	// 		visibility: 'visible',
-	// 		transform: 'translateY(-1rem)',
-	// 		opacity: 0
-	// 	},
-	// ],{
-	// 	duration:300,
-	// 	fill:'forwards'
-	// })
-	// navbar_person.animate([	//头像关闭缓动动画
-	// 	{
-	// 		visibility: 'visible',
-	// 		transform: 'translateY(0rem)',
-	// 		opacity: 1
-	// 	},{
-	// 		visibility: 'visible',
-	// 		transform: 'translateY(-1rem)',
-	// 		opacity: 0
-	// 	}
-	// ],{
-	// 	duration:300,
-	// 	fill:'forwards'
-	// })
-	
-	// // 设置一个定时器
-	// var myVar_nav = setTimeout(function () {	//动画完全执行完后隐藏元素
-	// 	navbar_list.style.cssText = "display: none";
-	// 	navbar_person.style.cssText = "display: none";
-		
-	// 	clearTimeout(myVar_nav);
-	// }, 200);
-	
-	// close = true;
-	
 }
 
 
@@ -330,36 +271,6 @@ const clientHeight = document.documentElement.clientHeight;
 let mobile_code = document.querySelector('.mobile-code');
 cover_code.addEventListener('touchstart', () => {
 	startTime = Date.now();
-
-	// 错误一
-	// const cover_code_location = cover_code.getBoundingClientRect();
-	// // 相对于浏览器窗口左上角的坐标
-	// const cover_code_location_left = cover_code_location.left;   // 元素左侧到视口左侧的距离
-	// const cover_code_location_top = cover_code_location.top;     // 元素顶部到视口顶部的距离
-	// // console.log('左'+cover_code_location_left,'上'+cover_code_location_top)
-	
-	// cover_code.style.cssText = "position:fixed;z-index:999;border:0;background-color:#fff;left:" + cover_code_location_left + "px;" + "top:" + cover_code_location_top + "px";
-	
-
-	
-	// cover_code.animate([	//头像关闭缓动动画
-	// 	{
-	// 		width: '2.8rem',
-	// 		height:'2.8rem',
-	// 		borderRadius:'8px',
-	// 	},{
-	// 		width: '220px',
-	// 		height:'220px',
-	// 		borderRadius:'8px',
-	// 		left:(clientWidth-220)/2-10 + 'px',
-	// 		top: (clientHeight-220)/2 + 'px',
-	// 	}
-	// ],{
-	// 	duration:300,
-	// 	fill:'forwards'
-	// })
-	//——————————————————————————————————————————————————————————————————————————————————
-	
 });
 cover_code.addEventListener('touchend', (e) => {
   if (Date.now() - startTime < 200) { // 判断点击时长
