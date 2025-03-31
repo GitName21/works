@@ -328,23 +328,9 @@ const clientHeight = document.documentElement.clientHeight;
 // console.log('屏幕宽'+clientWidth,'屏幕高'+clientHeight)
 
 let mobile_code = document.querySelector('.mobile-code');
-cover_code.addEventListener('click', () => {
-	maskShow();
-	
-	mobile_code.style.cssText = "display: flex";
-	
-	mobile_code.animate([	//动画
-		{
-			opacity: 0,
-			transform:'translate3d(0,20px,0)'
-		},{
-			opacity: 1,
-			transform:'translate3d(0,0,0)'
-		},
-	],{
-		duration:300,
-		fill:'forwards'
-	})
+cover_code.addEventListener('touchstart', () => {
+	startTime = Date.now();
+
 	// 错误一
 	// const cover_code_location = cover_code.getBoundingClientRect();
 	// // 相对于浏览器窗口左上角的坐标
@@ -374,6 +360,27 @@ cover_code.addEventListener('click', () => {
 	// })
 	//——————————————————————————————————————————————————————————————————————————————————
 	
+});
+cover_code.addEventListener('touchend', (e) => {
+  if (Date.now() - startTime < 200) { // 判断点击时长
+    // 执行点击逻辑
+	maskShow();
+	
+	mobile_code.style.cssText = "display: flex";
+	
+	mobile_code.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+  }
 });
 // 二维码弹窗文案,微信浏览器与其它浏览器文案不一样
 // 判断是否为微信浏览器
