@@ -172,8 +172,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 画册排版 */
 	.main-content-album div{width: 49.5%;height: auto;margin-bottom: 0.2rem;}
 	.main-content-album div:last-child{width: 100%;}
-	.main-content-album-1 div{margin-bottom: 0.2rem;}
-	.main-content-album-2 div{width: 49.5;height: auto;margin-bottom: 0.2rem;}
+	.main-content-album-1 div{margin-bottom: 0.2rem;width: 49.5%;}
+	.main-content-album-2 div{width: 49.5%;height: auto;margin-bottom: 0.2rem;}
 	/* h5 */
 	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
 	/* .label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;} */
