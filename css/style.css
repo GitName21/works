@@ -44,10 +44,16 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 主题内容 */
 .main{width:100%;height: auto;color: #fff;}
-.main-title{width: 85%;height: auto;margin: 2rem auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
-.main-separate{width: 0.0625rem;height: 0.875rem;background-color: #ffffff;}
-.main-line{width: 67rem;height: 0.0625rem;background-color: #fff;}
-.main-circular{width: 0.875rem;height: 0.875rem;border-radius: 100%;border:0.125rem solid #fff;}
+.main-title{width: 85%;height: auto;margin: 2rem auto;display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;text-transform: uppercase;}
+.main-title>div{width: 100%;text-align: center;}
+.main-separate{height: auto;display: flex;flex-wrap: nowrap;width: 100%;justify-content: space-between;border-top: 0.0625rem solid #393939;border-bottom: 0.0625rem solid #393939;font-size: 0.75rem;line-height: 1.5rem;color: #737373;margin: 0 auto 0.5rem auto;}
+.main-title-ch{font-size:1.5rem;margin-bottom: 1rem;font-weight: bold;letter-spacing: 0.25rem;}
+.main-title-en{position: relative;color: #fff;font-size: 2rem;font-weight: bold;}
+.main-title-en::before{position: absolute;width: 0.8rem;height: 0.8rem;border-radius: 100%;content: '';left: 0;background-color: #474747;}
+.main-title-en::after{position: absolute;width: 3rem;height: 0.8rem;border-radius: 1rem;content: '';left: 2rem;background-color: #474747;}
+/* 描述 */
+.main-describe{width: 85%;margin:0 auto 0.5rem auto;}
+
 /* 内容 */
 .main-content{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
 .main-content-personal div{width: 10%;height: auto;margin-bottom: 0rem;}
@@ -158,19 +164,19 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-person-name{line-height: 1rem;margin-left: 0.5rem;}
 	
 	/* 主题 */
-	.main-title{flex-wrap: wrap;justify-content: center;width: 90%;}
-	.main-separate{margin: 0 0.5rem;}
-	.main-line{margin: 0.5rem 0 0rem 0;opacity: 0.25;}
-	.main-circular{display: none;}
+	.main-title{flex-wrap: wrap;justify-content: center;width: 90%;margin-bottom: 0;}
+	.main-describe{width: 90%;}
 	/* 内容 */
 	.main-content{width: 90%;}
 	.main-content-personal div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
 	/* 画册排版 */
-	.main-content-album div{width: 100%;height: auto;margin-bottom: 0.6rem;}
-	.main-content-album-2 div{width: 100%;height: auto;margin-bottom: 0.6rem;}
+	.main-content-album div{width: 49.5%;height: auto;margin-bottom: 0.2rem;}
+	.main-content-album div:last-child{width: 100%;}
+	.main-content-album-1 div{margin-bottom: 0.2rem;}
+	.main-content-album-2 div{width: 49.5;height: auto;margin-bottom: 0.2rem;}
 	/* h5 */
 	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
-	.label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;}
+	/* .label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;} */
 	/* 3d */
 	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
 	
