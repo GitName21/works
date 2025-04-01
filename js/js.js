@@ -508,6 +508,7 @@ function updateActiveMenu() {
   if (closestIndex !== -1) {
     side_li.forEach((li, index) => {
       li.classList.toggle('side-focus', index === closestIndex); // ✅ 立即切换
+	  side_index = closestIndex;
     });
   }
 }
