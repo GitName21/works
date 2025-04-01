@@ -482,9 +482,11 @@ window.addEventListener('scroll', () => {
   isScrolling = true;
   setTimeout(() => {
     updateActiveMenu();
+	scrollShow();       // 3. 实际执行任务
     isScrolling = false;
     lastScrollY = currentScrollY;
   }, 30); // ⚡ 缩短防抖间隔至 30ms
+  
 });
 
 // 更新高亮函数（优化判断逻辑）
@@ -496,7 +498,7 @@ function updateActiveMenu() {
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();
     const distanceToCenter = Math.abs(rect.top - window.innerHeight * 0.5); // ✅ 中心点优先级
-    
+	
     if (distanceToCenter < minDistance) {
       minDistance = distanceToCenter;
       closestIndex = index;
@@ -507,5 +509,33 @@ function updateActiveMenu() {
     side_li.forEach((li, index) => {
       li.classList.toggle('side-focus', index === closestIndex); // ✅ 立即切换
     });
+  }
+}
+
+// 滚动提示函数（修复函数名）
+function scrollShow() {
+	const sideWrap = document.querySelector('.side-wrap');
+  if (window.scrollY > 100) {
+    console.log('已滚动超过 100px'); // ✅ 改用日志输出
+    // 或更新 DOM 元素提示（非阻塞）
+	sideWrap.animate([
+		{
+			opacity:1,
+			right:'0.5rem'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+  }else{
+	  sideWrap.animate([
+	  	{
+	  		opacity:0,
+			right:'0rem'
+	  	}
+	  ],{
+	  	duration:300,
+	  	fill:'forwards'
+	  })
   }
 }

@@ -130,7 +130,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-contact-title>P:last-child{color: #252525;}
 
 /* 侧边栏 */
-.side-wrap{width: auto;height: 25vh;position: fixed;bottom: 40vh;right:0.5rem;align-items: center;}
+.side-wrap{width: auto;height: 25vh;position: fixed;bottom: 40vh;right:0rem;align-items: center;opacity: 0;}
 .side-wrap div{width: 60%;display: flex;justify-content: center;cursor: pointer;margin: 0 auto;}
 .side-wrap ul{line-height: 1.6rem;font-size: 0.75rem;text-align: center;color: #8b8b8b;}
 .side-wrap ul li{padding: 0 0.5rem;transition: all 0.3s ease;margin: 0.5rem 0;border-radius: 0.3125rem;cursor: pointer;-webkit-user-select: none; /* Chrome, Safari, Opera */-moz-user-select: none;    /* Firefox */-ms-user-select: none;     /* IE 10+ */user-select: none;         /* Standard syntax */}
