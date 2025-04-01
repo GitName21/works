@@ -540,3 +540,28 @@ function scrollShow() {
 	  })
   }
 }
+
+
+
+// 菜单栏
+const navbarList = document.querySelectorAll('.navbar-list li');	//获取li元素
+let listIndex = 0;	//保存索引
+
+navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引索
+	item.addEventListener('click',function(){	//点击li执行
+		listIndex = index;	//赋值索引
+		
+		// 滚动
+		const main_title = document.querySelectorAll('.main-title')[listIndex];
+		const rect = main_title.getBoundingClientRect();
+		const absoluteTop = rect.top + window.scrollY;
+		// console.log('绝对 Y 坐标:', absoluteTop);
+		// console.log('当前面板式：', main_title);
+		
+		  //平滑滚动到指定位置
+		  window.scrollTo({
+			top: absoluteTop-80,
+			behavior: 'smooth'
+		  });
+	})
+})
