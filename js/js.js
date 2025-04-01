@@ -303,11 +303,11 @@ function isWechatBrowser() {
 }
 // 使用示例
 if (isWechatBrowser()) {
-  console.log("当前运行在微信浏览器中");
+  // console.log("当前运行在微信浏览器中");
   // 可在此触发微信相关逻辑（如隐藏下载按钮、提示用户用浏览器打开等）
   mobile_code_cont.innerHTML='长按扫描二维码';
 } else {
-  console.log("当前不在微信浏览器中");
+  // console.log("当前不在微信浏览器中");
   mobile_code_cont.innerHTML = "长按保存二维码";
 }
 
@@ -359,3 +359,120 @@ mask.onclick = function(){
 	}
 	
 }
+
+
+// 侧边栏滚动动画
+const side_li = document.querySelectorAll('.side-wrap ul li');
+let side_index = 0;
+// // 方法一for
+// for(let i=0;i<side_li.length;i++){
+// 	side_li[i].index = i;	//将i重新赋值给元素的下标
+	
+// 	side_li[i].addEventListener('click',function(e){			//(e)=> 箭头函数没有自己的 this 绑定,改用function()
+// 		// 添加当前点击元素的焦点样式
+// 		this.classList.add("side-focus");
+// 		// console.log('当前下标' + this.index)
+// 		for (let j = 0; j < side_li.length; j++) {
+// 			if (j !== this.index) { // 判断索引是否与当前点击元素的索引不同
+// 				side_li[j].classList.remove("side-focus");
+// 			}
+// 		}
+		
+// 	})
+// }
+
+// 方法二foreach———————菜单点击实现焦点
+side_li.forEach((element, index) => {
+    element.addEventListener('click', function() {
+		side_index = index;
+		console.log('点击元素的索引是：' +side_index)
+		
+        // 移除所有元素的样式
+        side_li.forEach(el => el.classList.remove("side-focus"));
+        // 添加当前元素的样式
+        this.classList.add("side-focus");
+		
+		const main_title = document.querySelectorAll('.main-title')[side_index];
+		const rect = main_title.getBoundingClientRect();
+		const absoluteTop = rect.top + window.scrollY;
+		// console.log('绝对 Y 坐标:', absoluteTop);
+		// console.log('当前面板式：', main_title);
+
+		  //平滑滚动到指定位置
+		  window.scrollTo({
+			top: absoluteTop-80,
+			behavior: 'smooth'
+		  });
+		
+		console.log( '当前点击的元素对应的面板Y坐标是：' + rect.top);
+		
+    });
+});
+
+const side_up = document.querySelector('.side-up');
+const side_next = document.querySelector('.side-next');
+
+side_up.addEventListener('click',function(){
+	side_index--;
+	if(side_index < 0){
+		side_index = side_li.length-1;
+	}
+	// 移除所有元素的样式
+	side_li.forEach(el => el.classList.remove("side-focus"));
+	side_li[side_index].classList.add("side-focus");
+	
+	// 滚动
+	const main_title = document.querySelectorAll('.main-title')[side_index];
+	const rect = main_title.getBoundingClientRect();
+	const absoluteTop = rect.top + window.scrollY;
+	// console.log('绝对 Y 坐标:', absoluteTop);
+	// console.log('当前面板式：', main_title);
+	
+	  //平滑滚动到指定位置
+	  window.scrollTo({
+		top: absoluteTop-80,
+		behavior: 'smooth'
+	  });
+})
+
+side_next.addEventListener('click',function(){
+    // 增加索引，如果超过最大值则回到 0
+    // side_index = (side_index + 1) % side_li.length; // ✅ 用取模运算循环
+	side_index++;
+	if(side_index >= side_li.length){
+		side_index = 0;
+	}
+    // 移除所有元素的样式
+    side_li.forEach(el => el.classList.remove("side-focus"));
+    side_li[side_index].classList.add("side-focus");
+	
+	// 滚动
+	const main_title = document.querySelectorAll('.main-title')[side_index];
+	const rect = main_title.getBoundingClientRect();
+	const absoluteTop = rect.top + window.scrollY;
+	// console.log('绝对 Y 坐标:', absoluteTop);
+	// console.log('当前面板式：', main_title);
+	
+	  //平滑滚动到指定位置
+	  window.scrollTo({
+		top: absoluteTop-80,
+		behavior: 'smooth'
+	  });
+})
+
+
+  // 获取所有 <li> 的 Y 坐标
+  // function getLiYPositions() {
+  //   const listItems = document.querySelectorAll('.main-title');
+  //   return Array.from(listItems).map((li, index) => {
+  //     const rect = li.getBoundingClientRect();
+  //     return {
+  //       index: index,
+  //       yTop: rect.top,
+  //       yBottom: rect.bottom
+  //     };
+  //   });
+  // }
+
+  // // 打印坐标
+  // console.log(getLiYPositions());
