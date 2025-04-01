@@ -460,19 +460,52 @@ side_next.addEventListener('click',function(){
 	  });
 })
 
+// 滚动高亮
+// 修复变量名（关键！）
+let isScrolling = false; // ✅ 统一变量名
+let lastScrollY = 0;     // ✅ 新增：记录上次滚动位置
 
-  // 获取所有 <li> 的 Y 坐标
-  // function getLiYPositions() {
-  //   const listItems = document.querySelectorAll('.main-title');
-  //   return Array.from(listItems).map((li, index) => {
-  //     const rect = li.getBoundingClientRect();
-  //     return {
-  //       index: index,
-  //       yTop: rect.top,
-  //       yBottom: rect.bottom
-  //     };
-  //   });
-  // }
+// 滚动事件监听（优化防抖逻辑）
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const isScrollingFast = Math.abs(currentScrollY - lastScrollY) > 50; // ⚡ 判断是否快速滑动
+  
+  // 如果是快速滑动，立即响应（不防抖）
+  if (isScrollingFast) {
+    updateActiveMenu();
+    lastScrollY = currentScrollY;
+    return;
+  }
 
-  // // 打印坐标
-  // console.log(getLiYPositions());
+  // 普通滚动仍用防抖
+  if (isScrolling) return;
+  isScrolling = true;
+  setTimeout(() => {
+    updateActiveMenu();
+    isScrolling = false;
+    lastScrollY = currentScrollY;
+  }, 30); // ⚡ 缩短防抖间隔至 30ms
+});
+
+// 更新高亮函数（优化判断逻辑）
+function updateActiveMenu() {
+  const sections = document.querySelectorAll('.main-title');
+  let closestIndex = -1;
+  let minDistance = Infinity;
+
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    const distanceToCenter = Math.abs(rect.top - window.innerHeight * 0.5); // ✅ 中心点优先级
+    
+    if (distanceToCenter < minDistance) {
+      minDistance = distanceToCenter;
+      closestIndex = index;
+    }
+  });
+
+  if (closestIndex !== -1) {
+    side_li.forEach((li, index) => {
+      li.classList.toggle('side-focus', index === closestIndex); // ✅ 立即切换
+    });
+  }
+}
