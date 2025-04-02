@@ -81,7 +81,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .top-wrap>div:last-child{width: auto;height: auto;border-radius: 100%;border: 0 solid #fff; justify-content: center;align-items: center;margin: 0 0 0 0.3rem;overflow: hidden;display: flex;}
 
 /* 简历 */
-.biographical-notes-wrap{width: 70%;height: 70vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;/* background: #fff url("../img/bio-bg.png") repeat left top / auto; */flex-wrap: wrap;align-content: flex-start;background: linear-gradient(180deg, rgba(230, 239, 254, 1) 0%, rgba(255, 249, 253, 1) 100%);}
+.biographical-notes-wrap{width: 70%;height: 70vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;/* background: #fff url("../img/bio-bg.png") repeat left top / auto; */flex-wrap: wrap;align-content: flex-start;background: linear-gradient(180deg, rgba(230, 239, 254, 1) 0%, rgba(255, 249, 253, 1) 100%);z-index: 9999;}
 .hello{width: 100%;height: auto;}
 .hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
@@ -139,12 +139,12 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .side-focus{color: #fff;}
 
 /* 遮罩 */
-.mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;}
+.mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;z-index: 999;}
 
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
 	/* 导航 */
-	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;}
+	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
 	/* 菜单内容 */
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
@@ -161,7 +161,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-navbar>ul>li:nth-child(2){top: 0.39rem;}
 	.mobile-navbar>ul>li:last-child{bottom: 0;}
 	/* 头像 */
-	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 4rem;margin: 0 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
+	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 4rem;margin: 1rem 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
 	.mobile-person-btn{display: block;color:#fff;display: flex;justify-content: space-between;align-items: center;width: 90%;}
 	.mobile-person-menu{display: flex;flex-wrap: nowrap;align-items: center;font-size: 0.75rem;}
 	.mobile-person-menu div{display: flex;align-items: center;margin-left: 0.8rem;}
@@ -194,14 +194,14 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.thanks-menu ul li{margin: 0;}
 	
 	/* 封面 */
-	.cover-wrap{margin: 0 auto 5rem auto;width: 90%;}
+	.cover-wrap{margin: 5rem auto 5rem auto;width: 90%;}
 	.cover-title{margin: 3rem 0 1rem 0;}
 	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
 	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
 	.cover-contact{justify-content: center;}
 	.cover-code-img{display: none;}
 	/* 二维码 */
-	.mobile-code{width: 90%;height: auto;background-color: #fff;position: fixed;display: flex;bottom: 2.5rem;left: 5%;justify-content: center;align-items: center;padding: 3.5rem 0;border-radius: 1.25rem;flex-wrap: wrap;display: none;}
+	.mobile-code{width: 90%;height: auto;background-color: #fff;position: fixed;display: flex;bottom: 2.5rem;left: 5%;justify-content: center;align-items: center;padding: 3.5rem 0;border-radius: 1.25rem;flex-wrap: wrap;display: none;z-index: 9999;}
 	.mobile-code div{display: flex;justify-content: center;flex-wrap: wrap;}
 	.mobile-code div:last-child{margin-top: 1rem;}
 	.mobile-code img{width: 40%;height: auto;}

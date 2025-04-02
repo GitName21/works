@@ -130,7 +130,7 @@ mobile_navbar_btn.onclick = function(){
 		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
 		
-		navbar_wrap.animate([	//导航栏打开动画
+		navbar_wrap.animate([	//导航栏关闭动画
 			{
 				height: '100vh',
 			},{
@@ -185,6 +185,7 @@ mobile_navbar_btn.onclick = function(){
 }
 
 
+
 // PC端简历
 navbar_person_head = document.querySelector('.navbar-person-head');
 const biographical_notes = document.querySelector('.biographical-notes-wrap');
@@ -228,6 +229,8 @@ mobile_person_look.addEventListener('click', function(event) {
 	})
 });
 
+
+
 // 返回顶部
 let top_wrap = document.querySelector('.top-wrap');
 // 核心滚动函数（支持自定义速度）
@@ -258,6 +261,7 @@ function smoothScrollTop(duration = 800) {
 top_wrap.addEventListener('click', () => {
     smoothScrollTop(1000); // 参数控制滚动时长（单位：毫秒）
 });
+
 
 
 // 移动端二维码弹窗
@@ -310,6 +314,8 @@ if (isWechatBrowser()) {
   // console.log("当前不在微信浏览器中");
   mobile_code_cont.innerHTML = "长按保存二维码";
 }
+
+
 
 // 关闭
 mask.onclick = function(){
@@ -517,7 +523,7 @@ function updateActiveMenu() {
 function scrollShow() {
 	const sideWrap = document.querySelector('.side-wrap');
   if (window.scrollY > 100) {
-    console.log('已滚动超过 100px'); // ✅ 改用日志输出
+    // console.log('已滚动超过 100px'); // ✅ 改用日志输出
     // 或更新 DOM 元素提示（非阻塞）
 	sideWrap.animate([
 		{
@@ -551,17 +557,80 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 	item.addEventListener('click',function(){	//点击li执行
 		listIndex = index;	//赋值索引
 		
+		// 恢复滚动
+		scroll();
+		
+		console.log('出发')
+		
 		// 滚动
 		const main_title = document.querySelectorAll('.main-title')[listIndex];
 		const rect = main_title.getBoundingClientRect();
 		const absoluteTop = rect.top + window.scrollY;
-		// console.log('绝对 Y 坐标:', absoluteTop);
+		console.log('绝对 Y 坐标:', absoluteTop);
 		// console.log('当前面板式：', main_title);
 		
-		  //平滑滚动到指定位置
-		  window.scrollTo({
+		//平滑滚动到指定位置
+		window.scrollTo({
 			top: absoluteTop-80,
 			behavior: 'smooth'
-		  });
+		});
+		
+		// 关闭导航
+		// 按钮动画
+		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
+		mobile_navbar_btn3.style.cssText = "opacity: 1";
+		
+		navbar_wrap.animate([	//导航栏关闭动画
+			{
+				height: '100vh',
+			},{
+				height: '3.5rem',
+			},{
+				height: 'auto',
+			}
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+		
+		navbar_list.animate([	//导航栏关闭菜单缓动动画
+			{
+				visibility: 'visible',
+				transform: 'translateY(0rem)',
+				opacity: 1
+			},{
+				visibility: 'visible',
+				transform: 'translateY(-1rem)',
+				opacity: 0
+			},
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+		navbar_person.animate([	//头像关闭缓动动画
+			{
+				visibility: 'visible',
+				transform: 'translateY(0rem)',
+				opacity: 1
+			},{
+				visibility: 'visible',
+				transform: 'translateY(-1rem)',
+				opacity: 0
+			}
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+		
+		// 设置一个定时器
+		var myVar = setTimeout(function () {	//动画完全执行完后隐藏元素
+			navbar_list.style.cssText = "display: none";
+			navbar_person.style.cssText = "display: none";
+			
+			clearTimeout(myVar);
+		}, 200);
+		
+		close = true;
 	})
 })
