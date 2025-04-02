@@ -16,7 +16,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .mobile-person-btn{display: none;}
 /* 列表 */
 .navbar-list{display: flex;flex-wrap: nowrap;}
-.navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;color: #a7a7a7;}
+.navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;color: #a7a7a7;cursor: pointer;}
 .navbar-list>li:hover{color: #fff;}
 .mobile-navbar-title{transition: 0s all ease;opacity: 0;visibility: hidden;width: 0;}
 /* 移动端菜单展开按钮 */
@@ -145,6 +145,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
+	/* 针对所有元素 */
+	* {
+	  -webkit-tap-highlight-color: transparent;
+	}
 	/* 导航 */
 	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
 	/* 菜单内容 */
