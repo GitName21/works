@@ -273,29 +273,39 @@ const clientHeight = document.documentElement.clientHeight;
 // console.log('屏幕宽'+clientWidth,'屏幕高'+clientHeight)
 
 let mobile_code = document.querySelector('.mobile-code');
-cover_code.addEventListener('touchstart', () => {
+cover_code.addEventListener('click', () => {
 	startTime = Date.now();
 });
-cover_code.addEventListener('touchend', (e) => {
-  if (Date.now() - startTime < 200) { // 判断点击时长
-    // 执行点击逻辑
-	maskShow();
+cover_code.addEventListener('click', (e) => {
 	
-	mobile_code.style.cssText = "display: flex";
+	// 判断是否是移动端
+	// 不含滚动条的尺寸，根据文档模式判断
+	const isCSS1Compat = (document.compatMode === "CSS1Compat");
+	const element = isCSS1Compat ? document.documentElement : document.body;
 	
-	mobile_code.animate([	//动画
-		{
-			opacity: 0,
-			transform:'translate3d(0,20px,0)'
-		},{
-			opacity: 1,
-			transform:'translate3d(0,0,0)'
-		},
-	],{
-		duration:300,
-		fill:'forwards'
-	})
-  }
+	if(element.clientWidth <= 767){	//如果是移动端执行
+		if (Date.now() - startTime < 200) { // 判断点击时长
+		  // 执行点击逻辑
+			maskShow();
+			
+			mobile_code.style.cssText = "display: flex";
+			
+			mobile_code.animate([	//动画
+				{
+					opacity: 0,
+					transform:'translate3d(0,20px,0)'
+				},{
+					opacity: 1,
+					transform:'translate3d(0,0,0)'
+				},
+			],{
+				duration:300,
+				fill:'forwards'
+			})
+		}
+	}
+
+  
 });
 // 二维码弹窗文案,微信浏览器与其它浏览器文案不一样
 // 判断是否为微信浏览器
