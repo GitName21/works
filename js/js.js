@@ -190,22 +190,30 @@ mobile_navbar_btn.onclick = function(){
 navbar_person_head = document.querySelector('.navbar-person-head');
 const biographical_notes = document.querySelector('.biographical-notes-wrap');
 navbar_person_head.onclick = function(){
-	maskShow();
+	// 判断是否是移动端
+	// 不含滚动条的尺寸，根据文档模式判断
+	const isCSS1Compat = (document.compatMode === "CSS1Compat");
+	const element = isCSS1Compat ? document.documentElement : document.body;
 	
-	biographical_notes.style.cssText = "display: flex";
-	
-	biographical_notes.animate([	//动画
-		{
-			opacity: 0,
-			transform:'translate3d(0,20px,0)'
-		},{
-			opacity: 1,
-			transform:'translate3d(0,0,0)'
-		},
-	],{
-		duration:300,
-		fill:'forwards'
-	})
+	if(element.clientWidth >= 767){	//如果是移动端执行
+		maskShow();
+		
+		biographical_notes.style.cssText = "display: flex";
+		
+		biographical_notes.animate([	//动画
+			{
+				opacity: 0,
+				transform:'translate3d(0,20px,0)'
+			},{
+				opacity: 1,
+				transform:'translate3d(0,0,0)'
+			},
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+	}
+
 }
 // 移动简历
 const mobile_person_look = document.querySelector('.mobile-person-look');
