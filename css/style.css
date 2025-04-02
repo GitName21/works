@@ -61,7 +61,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-content-personal div{width: 10%;height: auto;margin-bottom: 0rem;}
 .main-content div img{width: 100%;height: auto;transition: all 0.3s ease;}
 /* 展会视觉 */
-.main-content-exhibition div:last-child{display: none;}
+.mobile-cont{display: none;}
+/* .main-content-exhibition div{} */
 /* 画册排版 */
 .main-content-album div{width: 33%;height: auto;margin-bottom: 0.6rem;}
 .main-content-album-1 div{width:49.75%;height: auto;margin-bottom: 0.6rem;}
@@ -188,8 +189,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content{width: 90%;}
 	.main-content-personal div{width: 25%;height: auto;margin-bottom:0rem;}
 	/* 展会视觉 */
-	.main-content-exhibition div:first-child{display: none;}
-	.main-content-exhibition div:last-child{display: block;}
+	.pc-cont{display: none;}
+	.mobile-cont{display: block;}
 	/* 画册排版 */
 	.main-content-album div{width: 49.5%;height: auto;margin-bottom: 0.2rem;}
 	.main-content-album div:last-child{width: 100%;}
