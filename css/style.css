@@ -201,7 +201,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.cover-contact{justify-content: center;}
 	.cover-code-img{display: none;}
 	/* 二维码 */
-	.mobile-code{width: 90%;height: auto;background-color: #fff;position: fixed;display: flex;bottom: 2.5rem;left: 5%;justify-content: center;align-items: center;padding: 3.5rem 0;border-radius: 1.25rem;flex-wrap: wrap;display: none;z-index: 9999;}
+	.mobile-code{width: 100%;height: auto;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding: 3.5rem 0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;}
 	.mobile-code div{display: flex;justify-content: center;flex-wrap: wrap;}
 	.mobile-code div:last-child{margin-top: 1rem;}
 	.mobile-code img{width: 40%;height: auto;}
