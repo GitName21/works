@@ -182,7 +182,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-describe{width: 90%;}
 	/* 内容 */
 	.main-content{width: 90%;}
-	.main-content-personal div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
+	.main-content-personal div{width: 25%;height: auto;margin-bottom:0rem;}
 	/* 展会视觉 */
 	.main-content-exhibition div:first-child{display: none;}
 	.main-content-exhibition div:last-child{display: block;}
