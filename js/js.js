@@ -184,7 +184,7 @@ mobile_navbar_btn.onclick = function(){
 	}
 }
 
-
+ 
 
 // PC端简历
 navbar_person_head = document.querySelector('.navbar-person-head');
@@ -218,7 +218,7 @@ mobile_person_look.addEventListener('click', function(event) {
 	biographical_notes.animate([	//动画
 		{
 			opacity: 0,
-			transform:'translate3d(0,20px,0)'
+			transform:'translate3d(20px,0,0)'
 		},{
 			opacity: 1,
 			transform:'translate3d(0,0,0)'
@@ -228,6 +228,48 @@ mobile_person_look.addEventListener('click', function(event) {
 		fill:'forwards'
 	})
 });
+// 简历返回
+const bioBack = document.querySelector('.bio-back div');
+bioBack.addEventListener('click',(e) => {
+	mask.animate([	//遮罩动画
+		{
+			opacity: 1
+		},{
+			opacity: 0
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar = setTimeout(function () {
+		mask.style.cssText = "display: none";
+		clearTimeout(myVar);
+	}, 200);
+	// 简历关闭
+	biographical_notes.animate([	//动画
+		{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},{
+			opacity: 0,
+			transform:'translate3d(20px,0,0)'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar_bio = setTimeout(function () {
+		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
+		clearTimeout(myVar_bio);
+	}, 300);
+	if(!close){	//解决已导航栏开关冲突问题
+		document.body.style.overflow = 'hidden';
+		// 或通过添加CSS类（推荐）
+		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+	}
+})
 
 
 
@@ -350,29 +392,7 @@ mask.onclick = function(){
 		clearTimeout(myVar);
 	}, 300);
 	
-	// 简历关闭
-	biographical_notes.animate([	//动画
-		{
-			opacity: 1,
-			transform:'translate3d(0,0,0)'
-		},{
-			opacity: 0,
-			transform:'translate3d(0,20px,0)'
-		}
-	],{
-		duration:300,
-		fill:'forwards'
-	})
-	// 设置一个定时器
-	var myVar_bio = setTimeout(function () {
-		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
-		clearTimeout(myVar_bio);
-	}, 300);
-	if(!close){	//解决已导航栏开关冲突问题
-		document.body.style.overflow = 'hidden';
-		// 或通过添加CSS类（推荐）
-		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
-	}
+
 	
 }
 

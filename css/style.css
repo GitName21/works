@@ -209,9 +209,16 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code img{width: 40%;height: auto;}
 	
 	/* 简历 */
-	.biographical-notes-wrap{width: 80%;height: 85vh;margin-left: 5%;bottom:3vh;padding: 5%;overflow: scroll;}
+	.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
+	/* 返回 */
+	.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.8rem 0;background-color: #e7f0fe;z-index: 99;padding: 5%;font-size: 1.125rem;}
+	.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;}
+	.bio-back div svg{margin-right:0.5rem;}
+	
+	.hello{padding: 0 5%;width: 90%;}
+	
 	.bio-code-img{display: none;}
-	.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;}
+	.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;padding: 0 5%;width: 90%;}
 	.bio-cont-wrap-left{width: 100%;}
 	.bio-cont-wrap-right{width: 100%;}
 	.bio-cont-about-text{background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;line-height: 1.35rem;}
@@ -240,7 +247,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-contact-title>P:last-child{color: #b9b9b9;}
 	
 	/* 底下 */
-	.bio-footer{width: 100%;margin: auto;}
+	.bio-footer{width:90%;margin: auto;}
 	
 	/* 侧边栏 */
 	.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
