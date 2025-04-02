@@ -448,7 +448,7 @@ side_li.forEach((element, index) => {
 			behavior: 'smooth'
 		  });
 		
-		console.log( '当前点击的元素对应的面板Y坐标是：' + rect.top);
+		// console.log( '当前点击的元素对应的面板Y坐标是：' + rect.top);
 		
     });
 });
@@ -613,62 +613,71 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 			behavior: 'smooth'
 		});
 		
-		// 关闭导航
+		// 移动端关闭导航
 		// 按钮动画
-		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
-		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
-		mobile_navbar_btn3.style.cssText = "opacity: 1";
+		// 判断是否是移动端
+		// 不含滚动条的尺寸，根据文档模式判断
+		const isCSS1Compat = (document.compatMode === "CSS1Compat");
+		const element = isCSS1Compat ? document.documentElement : document.body;
 		
-		navbar_wrap.animate([	//导航栏关闭动画
-			{
-				height: '100vh',
-			},{
-				height: '3.5rem',
-			},{
-				height: 'auto',
-			}
-		],{
-			duration:300,
-			fill:'forwards'
-		})
-		
-		navbar_list.animate([	//导航栏关闭菜单缓动动画
-			{
-				visibility: 'visible',
-				transform: 'translateY(0rem)',
-				opacity: 1
-			},{
-				visibility: 'visible',
-				transform: 'translateY(-1rem)',
-				opacity: 0
-			},
-		],{
-			duration:300,
-			fill:'forwards'
-		})
-		navbar_person.animate([	//头像关闭缓动动画
-			{
-				visibility: 'visible',
-				transform: 'translateY(0rem)',
-				opacity: 1
-			},{
-				visibility: 'visible',
-				transform: 'translateY(-1rem)',
-				opacity: 0
-			}
-		],{
-			duration:300,
-			fill:'forwards'
-		})
-		
-		// 设置一个定时器
-		var myVar = setTimeout(function () {	//动画完全执行完后隐藏元素
-			navbar_list.style.cssText = "display: none";
-			navbar_person.style.cssText = "display: none";
+		if(element.clientWidth <= 767){	//如果是移动端执行
+			mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
+			mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
+			mobile_navbar_btn3.style.cssText = "opacity: 1";
 			
-			clearTimeout(myVar);
-		}, 200);
+			navbar_wrap.animate([	//导航栏关闭动画
+				{
+					height: '100vh',
+				},{
+					height: '3.5rem',
+				},{
+					height: 'auto',
+				}
+			],{
+				duration:300,
+				fill:'forwards'
+			})
+			
+			navbar_list.animate([	//导航栏关闭菜单缓动动画
+				{
+					visibility: 'visible',
+					transform: 'translateY(0rem)',
+					opacity: 1
+				},{
+					visibility: 'visible',
+					transform: 'translateY(-1rem)',
+					opacity: 0
+				},
+			],{
+				duration:300,
+				fill:'forwards'
+			})
+			navbar_person.animate([	//头像关闭缓动动画
+				{
+					visibility: 'visible',
+					transform: 'translateY(0rem)',
+					opacity: 1
+				},{
+					visibility: 'visible',
+					transform: 'translateY(-1rem)',
+					opacity: 0
+				}
+			],{
+				duration:300,
+				fill:'forwards'
+			})
+			
+			// 设置一个定时器
+			var myVar = setTimeout(function () {	//动画完全执行完后隐藏元素
+				navbar_list.style.cssText = "display: none";
+				navbar_person.style.cssText = "display: none";
+				
+				clearTimeout(myVar);
+			}, 200);
+			
+			close = true;
 		
-		close = true;
+		}
+
 	})
 })
