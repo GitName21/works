@@ -52,7 +52,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-title-en::before{position: absolute;width: 0.8rem;height: 0.8rem;border-radius: 100%;content: '';left: 0;background-color: #474747;}
 .main-title-en::after{position: absolute;width: 3rem;height: 0.8rem;border-radius: 1rem;content: '';left: 2rem;background-color: #474747;}
 /* 描述 */
-.main-describe{width: 85%;margin:0 auto 0.5rem auto;}
+.main-describe{width: 85%;margin:0.4rem auto 0.5rem auto;}
 
 /* 内容 */
 .main-content{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: space-between;}
@@ -192,7 +192,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-album-1 div{margin-bottom: 0.2rem;width: 49.5%;}
 	.main-content-album-2 div{width: 49.5%;height: auto;margin-bottom: 0.2rem;}
 	/* h5 */
-	.main-content-h5 div{width: 49.5%;height: auto;margin-bottom: 0.25rem;}
+	.main-content-h5 div{width: 33%;height: auto;margin-bottom: 0.15rem;}
 	/* .label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;} */
 	/* 3d */
 	.main-content-3d div{width: 100%;height: auto;margin-bottom: 1rem;}
