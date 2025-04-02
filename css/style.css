@@ -255,10 +255,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
 	.bio-skill-cont{padding: 3.5%;background-color: #fff;width: 93%;margin-bottom: 0.5rem;border-radius: 0.3125rem;}
 	/* 技能 */
-	.bio-skill-ps{width: 14rem;}
-	.bio-skill-ai{width: 12rem;}
-	.bio-skill-c4d{width: 13rem;}
-	.bio-skill-web{width: 14rem;}
+	.bio-skill-ps{width: 13rem;}
+	.bio-skill-ai{width: 11rem;}
+	.bio-skill-c4d{width: 12rem;}
+	.bio-skill-web{width: 13rem;}
 	/* 时间 */
 /* 	.bio-skill-experience-cont-time{position: relative;}
 	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
