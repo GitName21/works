@@ -6,6 +6,8 @@ img{border: 0;display: block;margin: 0;padding: 0;}
 
 body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe52.png#92c201942ea34efdbb36345b10d7d48f); */background-color:#090A07;font-size: 0.875rem;}
 
+.no-scroll { overflow: hidden; }
+
 /* 导航 */
 .navbar-wrap{width: 100%;height: auto;}
 /* 菜单内容 */
@@ -84,6 +86,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 简历 */
 .biographical-notes-wrap{width: 70%;height: 70vh;margin-left: 13.5%;position: fixed;bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: none;/* background: #fff url("../img/bio-bg.png") repeat left top / auto; */flex-wrap: wrap;align-content: flex-start;background: linear-gradient(180deg, rgba(230, 239, 254, 1) 0%, rgba(255, 249, 253, 1) 100%);z-index: 9999;}
+/* 返回按钮 */
+.bio-back{display: none;}
 .hello{width: 100%;height: auto;}
 .hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
@@ -220,7 +224,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 简历 */
 	.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
 	/* 返回 */
-	.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;}
+	.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;display: block;}
 	.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;}
 	.bio-back div svg{margin:0 0.25rem 0 0rem;}
 	

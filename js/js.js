@@ -272,7 +272,7 @@ bioBack.addEventListener('click',(e) => {
 		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
 		clearTimeout(myVar_bio);
 	}, 300);
-	if(!close){	//解决已导航栏开关冲突问题
+	if(!close){	//解决与导航栏开关冲突问题
 		document.body.style.overflow = 'hidden';
 		// 或通过添加CSS类（推荐）
 		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
@@ -401,7 +401,30 @@ mask.onclick = function(){
 	}, 300);
 	
 
-	
+	// 点击遮罩简历关闭
+	// 简历关闭
+	biographical_notes.animate([	//动画
+		{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myVar_bio = setTimeout(function () {
+		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
+		clearTimeout(myVar_bio);
+	}, 300);
+	if(!close){	//解决与导航栏开关冲突问题
+		document.body.style.overflow = 'hidden';
+		// 或通过添加CSS类（推荐）
+		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+	}
 }
 
 
