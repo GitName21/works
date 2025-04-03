@@ -713,13 +713,15 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 		// 恢复滚动
 		scroll();
 		
-		console.log('出发')
+		// console.log('出发')
+		
+		mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";	//显示移动端顶部简历按钮
 		
 		// 滚动
 		const main_title = document.querySelectorAll('.main-title')[listIndex];
 		const rect = main_title.getBoundingClientRect();
 		const absoluteTop = rect.top + window.scrollY;
-		console.log('绝对 Y 坐标:', absoluteTop);
+		// console.log('绝对 Y 坐标:', absoluteTop);
 		// console.log('当前面板式：', main_title);
 		
 		//平滑滚动到指定位置
