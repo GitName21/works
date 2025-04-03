@@ -176,7 +176,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-per-btn-2{width: 0.5rem;left: 0;top: 0.4rem;}
 	.mobile-per-btn-3{width: 0.6rem;left: 0;top: 0.6rem;}
 	
-	.home-title{color: #fff;font-weight: bold;}
+	.home-title{color: #fff;font-weight: bold;display: flex;flex-wrap: nowrap;}
 	.show-button{width: 1.2rem;height: 0.9rem;position: relative;}
 	.show-button>li{width: 1.2rem;height: 0.12rem;background-color: #fff;position: absolute;transition: all 0.3s ease;}
 	.show-button>li:first-child{top: 0;}
