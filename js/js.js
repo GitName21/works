@@ -131,9 +131,9 @@ mobile_navbar_btn.onclick = function(){
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
 		
-		if(window.scrollY>600){
+		// if(window.scrollY>600){
 			mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
-		}
+		// }
 		
 		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
@@ -639,7 +639,7 @@ window.addEventListener('scroll', () => {
   setTimeout(() => {
     updateActiveMenu();
 	scrollShow();       // 3. 实际执行任务
-	mobilePerBtnS();
+	// mobilePerBtnS();
     isScrolling = false;
     lastScrollY = currentScrollY;
   }, 30); // ⚡ 缩短防抖间隔至 30ms
@@ -806,8 +806,8 @@ function mobilePerBtnS(){
 		mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
 	}
 }
-if(window.scrollY<600){
-	mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;transition: all 0s ease;";
-}else{
-	mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
-}
+// if(window.scrollY<600){
+// 	mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;transition: all 0s ease;";
+// }else{
+// 	mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+// }
