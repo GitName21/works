@@ -65,6 +65,8 @@ let navbar_person = document.querySelector(".navbar-person");	//个人
 let navbar_wrap = document.querySelector(".navbar-wrap");	//导航栏模块
 let navbar_wrap_hight = navbar_wrap.offsetHeight;	//导航栏模块
 
+const mobilePerBtn =document.querySelector('.mobile-per-btn');	// 移动简历顶部固定按钮
+
 let close = true;	//移动端导航栏关闭：关闭
 
 // 移动端导航栏
@@ -74,6 +76,7 @@ mobile_navbar_btn.onclick = function(){
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg);top: 0.39rem;";
+		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;";
 		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg)";
 		mobile_navbar_btn3.style.cssText = "opacity: 0";
 		
@@ -127,6 +130,11 @@ mobile_navbar_btn.onclick = function(){
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
+		
+		if(window.scrollY>600){
+			mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+		}
+		
 		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
 		
@@ -236,6 +244,58 @@ mobile_person_look.addEventListener('click', function(event) {
 		fill:'forwards'
 	})
 });
+// 移动简历顶部固定按钮
+// const mobilePerBtn =document.querySelector('.mobile-per-btn');
+const mobilePerBtn1 =document.querySelector('.mobile-per-btn-1');
+const mobilePerBtn2 =document.querySelector('.mobile-per-btn-2');
+const mobilePerBtn3 =document.querySelector('.mobile-per-btn-3');
+// let mobilePerBtn
+mobilePerBtn.addEventListener('click', function(){
+	// 顶部导航按钮动画
+	mobilePerBtn1.animate([
+		{
+			left:'0.2rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	mobilePerBtn2.animate([
+		{
+			left:'0.4rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	mobilePerBtn3.animate([
+		{
+			left:'0.3rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	
+	maskShow();
+	
+	// 简历动画
+	biographical_notes.style.cssText = "display: flex";
+	
+	biographical_notes.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(20px,0,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+})
+
 // 简历返回
 const bioBack = document.querySelector('.bio-back div');
 bioBack.addEventListener('click',(e) => {
@@ -276,6 +336,35 @@ bioBack.addEventListener('click',(e) => {
 		document.body.style.overflow = 'hidden';
 		// 或通过添加CSS类（推荐）
 		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
+	}
+	
+	// 顶部导航按钮动画
+	mobilePerBtn1.animate([
+		{
+			left:'0rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	mobilePerBtn2.animate([
+		{
+			left:'0rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	mobilePerBtn3.animate([
+		{
+			left:'0rem',
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	if(close){
+		scroll();
 	}
 })
 
@@ -550,9 +639,12 @@ window.addEventListener('scroll', () => {
   setTimeout(() => {
     updateActiveMenu();
 	scrollShow();       // 3. 实际执行任务
+	mobilePerBtnS();
     isScrolling = false;
     lastScrollY = currentScrollY;
   }, 30); // ⚡ 缩短防抖间隔至 30ms
+  
+
   
 });
 
@@ -704,3 +796,18 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 
 	})
 })
+
+// 移动端顶部简历按钮开关
+function mobilePerBtnS(){
+	if(window.scrollY<600){
+		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;";
+	}else{
+		  
+		mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+	}
+}
+if(window.scrollY<600){
+	mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;transition: all 0s ease;";
+}else{
+	mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+}
