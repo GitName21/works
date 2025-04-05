@@ -73,7 +73,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* h5 */
 .main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
 /* 3d */
-.main-content-3d div{width: 33%;height: auto;margin-bottom: 0.5rem;}
+.main-content-3d>div{width: 32%;height: auto;margin-bottom: 0.5rem;}
+.main-content-3d-title p:last-child{font-size: 0.75rem;color: #545454;}
+.main-content-3d-img{margin-bottom: 0.5rem;}
 
 /* 感谢 */
 .thanks-wrap{width: 85%;margin: 10rem auto;}
@@ -211,7 +213,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-h5 div{width: 33%;height: auto;margin-bottom: 0.15rem;}
 	/* .label{width: 90%;margin: 0 auto 0.5rem auto;font-size: 0.75rem;} */
 	/* 3d */
-	.main-content-3d div{width: 100%;height: auto;margin-bottom: 0.25rem;}
+	.main-content-3d>div{width: 49%;height: auto;margin-bottom: 0.25rem;}
 	
 	/* 感谢 */
 	.thanks-wrap{margin: 5rem auto;width: 90%;}
