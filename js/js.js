@@ -813,3 +813,31 @@ function mobilePerBtnS(){
 // }else{
 // 	mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
 // }
+
+
+// 3d区域轮播图
+const Page = document.querySelectorAll('.d-spwer-page>li');
+const spwer = document.querySelector('.main-content-3d-3d-spwer');
+const spwerDiv = document.querySelectorAll('.main-content-3d-3d-spwer div');
+let pageNow = 0;
+let TdLeft = 0;
+
+Page.forEach((page,index) => {
+	page.addEventListener('click',function(){
+		
+		pageNow = index;
+		console.log(pageNow);
+		
+		TdLeft = pageNow*100;
+		console.log(TdLeft);
+		
+		spwer.style.cssText = "left:" + -TdLeft + "%";
+		
+		Page.forEach(el => {
+			el.style.cssText = "background-color: #fff;";
+		})
+		
+		this.style.cssText = "background-color: #da840c;";
+	})
+})
+
