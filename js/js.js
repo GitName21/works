@@ -368,6 +368,21 @@ bioBack.addEventListener('click',(e) => {
 	}
 })
 
+// 简历返回提示词的过渡动画
+const bioBackTips = document.querySelector('.bio-back span');
+let TipsScrollTopValue;
+let TipsOpacity;
+biographical_notes.addEventListener('scroll',function(){
+	TipsScrollTopValue = biographical_notes.scrollTop; // 单位：像素（px）
+	if(TipsScrollTopValue>=200){
+		TipsScrollTopValue = 200;
+	}
+	console.log(TipsScrollTopValue)
+	TipsOpacity = TipsScrollTopValue / 200;
+	
+	bioBackTips.style.cssText = "opacity: " + TipsOpacity;
+})
+
 
 
 // 返回顶部
@@ -640,6 +655,7 @@ window.addEventListener('scroll', () => {
     updateActiveMenu();
 	scrollShow();       // 3. 实际执行任务
 	// mobilePerBtnS();
+	
     isScrolling = false;
     lastScrollY = currentScrollY;
   }, 30); // ⚡ 缩短防抖间隔至 30ms

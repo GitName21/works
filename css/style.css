@@ -253,6 +253,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;display: block;}
 	.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;}
 	.bio-back div svg{margin:0 0.25rem 0 0rem;}
+	.bio-back span{opacity: 0;}
 	
 	.hello{padding: 0 5%;width: 90%;}
 	
