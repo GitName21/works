@@ -821,15 +821,18 @@ const spwer = document.querySelector('.main-content-3d-3d-spwer');
 const spwerDiv = document.querySelectorAll('.main-content-3d-3d-spwer div');
 let pageNow = 0;
 let TdLeft = 0;
+let isDragging = false;
+let startX,endX,moveX;
 
-Page.forEach((page,index) => {
+
+Page.forEach((page,index) => {	//点击
 	page.addEventListener('click',function(){
 		
 		pageNow = index;
-		console.log(pageNow);
+		// console.log(pageNow);
 		
 		TdLeft = pageNow*100;
-		console.log(TdLeft);
+		// console.log(TdLeft);
 		
 		spwer.style.cssText = "left:" + -TdLeft + "%";
 		
@@ -840,4 +843,51 @@ Page.forEach((page,index) => {
 		this.style.cssText = "background-color: #da840c;";
 	})
 })
+// 滑动
+spwer.addEventListener('touchstart',function(e){
+	startX = e.touches[0].clientX;
+	console.log('按下坐标：' + startX)
+	
+	isDragging = false;
+})
 
+spwer.addEventListener('touchmove',function(e){
+	moveX = e.touches[0].clientX - startX;
+	console.log('移动了：' + moveX)
+	
+	spwer.style.cssText = "left:" + moveX + "px";
+})
+
+spwer.addEventListener('touchend',function(e){
+	
+	
+	moveX = e.changedTouches[0].clientX - startX;
+	
+	console.log('松开了,共移动：' + moveX)
+	
+	if(moveX<20){
+		pageNow++;
+		
+		if(pageNow >= 1){
+			pageNow = 1;
+		}
+		
+		TdLeft = pageNow*100;
+		spwer.style.cssText = "left:" + -TdLeft + "%";
+	}
+	if(moveX>20){
+		pageNow--;
+		
+		if(pageNow <= 0){
+			pageNow = 0;
+		}
+		
+		TdLeft = pageNow*100;
+		spwer.style.cssText = "left:" + -TdLeft + "%";
+	}
+	
+	Page.forEach(el => {
+		el.style.cssText = "background-color: #fff;";
+	})
+	Page[pageNow].style.cssText = "background-color: #da840c;";
+})
