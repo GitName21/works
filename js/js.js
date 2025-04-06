@@ -815,79 +815,167 @@ function mobilePerBtnS(){
 // }
 
 
-// 3d区域轮播图
-const Page = document.querySelectorAll('.d-spwer-page>li');
-const spwer = document.querySelector('.main-content-3d-3d-spwer');
-const spwerDiv = document.querySelectorAll('.main-content-3d-3d-spwer div');
-let pageNow = 0;
-let TdLeft = 0;
-let isDragging = false;
-let startX,endX,moveX;
+// // 3d区域轮播图_____________我写的
+// const Page = document.querySelectorAll('.d-spwer-page>li');
+// const spwer = document.querySelector('.main-content-3d-3d-spwer');
+// const spwerDiv = document.querySelectorAll('.main-content-3d-3d-spwer div');
+// let pageNow = 0;
+// let TdLeft = 0;
+// let isDragging = false;
+// let startX,endX,moveX;
 
 
-Page.forEach((page,index) => {	//点击
-	page.addEventListener('click',function(){
+// Page.forEach((page,index) => {	//点击
+// 	page.addEventListener('click',function(){
 		
-		pageNow = index;
-		// console.log(pageNow);
+// 		pageNow = index;
+// 		// console.log(pageNow);
 		
+// 		TdLeft = pageNow*100;
+// 		// console.log(TdLeft);
+		
+// 		spwer.style.cssText = "left:" + -TdLeft + "%";
+		
+// 		Page.forEach(el => {
+// 			el.style.cssText = "background-color: #fff;";
+// 		})
+		
+// 		this.style.cssText = "background-color: #da840c;";
+// 	})
+// })
+// // 滑动
+// spwer.addEventListener('touchstart',function(e){
+// 	startX = e.touches[0].clientX;
+// 	// console.log('按下坐标：' + startX)
+	
+// 	isDragging = false;
+// })
+
+// spwer.addEventListener('touchmove',function(e){
+// 	moveX = e.touches[0].clientX - startX;
+// 	// console.log('移动了：' + moveX)
+	
+// 	spwer.style.cssText = "left:" + moveX + "px";
+// })
+
+// spwer.addEventListener('touchend',function(e){
+	
+	
+// 	moveX = e.changedTouches[0].clientX - startX;
+	
+// 	// console.log('松开了,共移动：' + moveX)
+	
+// 	if(moveX<20){
+// 		pageNow++;
+		
+// 		if(pageNow >= 1){
+// 			pageNow = 1;
+// 		}
+		
+// 		TdLeft = pageNow*100;
+// 		spwer.style.cssText = "left:" + -TdLeft + "%";
+// 	}
+// 	if(moveX>20){
+// 		pageNow--;
+		
+// 		if(pageNow <= 0){
+// 			pageNow = 0;
+// 		}
+		
+// 		TdLeft = pageNow*100;
+// 		spwer.style.cssText = "left:" + -TdLeft + "%";
+// 	}
+	
+// 	Page.forEach(el => {
+// 		el.style.cssText = "background-color: #fff;";
+// 	})
+// 	Page[pageNow].style.cssText = "background-color: #da840c;";
+// })
+
+// AI修复
+// 遍历所有轮播容器，为每个实例独立初始化
+document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
+  // 每个轮播的独立变量
+  let pageNow = 0;
+  let startX;
+  let isDragging = false;
+  let moveX;
+  let leftValue;
+  let leftNumber;
+
+  // 获取当前轮播对应的分页按钮（必须与轮播在同一父级下）
+  const Pages = spwer.parentElement.querySelectorAll('.d-spwer-page > li');
+  if (!Pages.length) return;
+
+  // 点击分页切换（修正为当前轮播的分页）
+  Pages.forEach((page, index) => {
+    page.addEventListener('click', function() {
+      pageNow = index;
+      spwer.style.left = `-${pageNow * 100}%`;
+      
+      // 更新当前轮播的分页样式
+      Pages.forEach(el => el.style.backgroundColor = '#fff');
+      this.style.backgroundColor = '#090A07';
+	  
+	  // console.log(pageNow)
+    });
+  });
+
+  // 触摸事件（绑定到当前轮播）
+  spwer.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+	
+	// 获取 left 值
+	leftValue = window.getComputedStyle(spwer).left;
+	leftNumber = parseFloat(leftValue) || 0;
+	// console.log('目前的左值是：' + leftNumber)
+	
+    spwer.style.transition = 'none'; // 拖动时禁用动画'
+  });
+
+  spwer.addEventListener('touchmove', function(e) {
+
+	
+    if (!isDragging) return;
+	
+    moveX = e.touches[0].clientX - startX;
+	moveX = leftNumber+moveX;	//要加上当前左边的值，否则会跳转到第一张
+	// console.log('手指滑动了：' + moveX)
+		
+    spwer.style.left = `${moveX}px`;
+
+  });
+
+  spwer.addEventListener('touchend', function(e) {
+    if (!isDragging) return;
+    isDragging = false;
+	
+		moveX = e.changedTouches[0].clientX - startX;
+		// console.log('松开了,共移动：' + moveX)
+		
+		if(moveX<-50){
+			pageNow++;
+			
+			if(pageNow >= 1){
+				pageNow = 1;
+			}
+		}
+		if(moveX>50){
+			pageNow--;
+			
+			if(pageNow <= 0){
+				pageNow = 0;
+			}
+		}
+		// console.log('当前引索是：' + pageNow)
 		TdLeft = pageNow*100;
-		// console.log(TdLeft);
-		
 		spwer.style.cssText = "left:" + -TdLeft + "%";
 		
-		Page.forEach(el => {
+		Pages.forEach(el => {
 			el.style.cssText = "background-color: #fff;";
 		})
-		
-		this.style.cssText = "background-color: #da840c;";
-	})
-})
-// 滑动
-spwer.addEventListener('touchstart',function(e){
-	startX = e.touches[0].clientX;
-	console.log('按下坐标：' + startX)
-	
-	isDragging = false;
-})
+		Pages[pageNow].style.cssText = "background-color: #090A07;";
 
-spwer.addEventListener('touchmove',function(e){
-	moveX = e.touches[0].clientX - startX;
-	console.log('移动了：' + moveX)
-	
-	spwer.style.cssText = "left:" + moveX + "px";
-})
-
-spwer.addEventListener('touchend',function(e){
-	
-	
-	moveX = e.changedTouches[0].clientX - startX;
-	
-	console.log('松开了,共移动：' + moveX)
-	
-	if(moveX<20){
-		pageNow++;
-		
-		if(pageNow >= 1){
-			pageNow = 1;
-		}
-		
-		TdLeft = pageNow*100;
-		spwer.style.cssText = "left:" + -TdLeft + "%";
-	}
-	if(moveX>20){
-		pageNow--;
-		
-		if(pageNow <= 0){
-			pageNow = 0;
-		}
-		
-		TdLeft = pageNow*100;
-		spwer.style.cssText = "left:" + -TdLeft + "%";
-	}
-	
-	Page.forEach(el => {
-		el.style.cssText = "background-color: #fff;";
-	})
-	Page[pageNow].style.cssText = "background-color: #da840c;";
-})
+  });
+});

@@ -82,7 +82,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 翻页 */
 .d-spwer-page{position: absolute;bottom: 1rem;display: flex;flex-wrap: nowrap;width: 100%;height:auto;justify-content: center;left: 0;}
 .d-spwer-page li{margin: 0 0.5rem;text-align: center;background-color: #fff;width: 1.5rem;height: 0.5rem;border-radius: 1rem;cursor: pointer;transition: all 0.3s linear;}
-.d-spwer-page li:first-child{background-color: #da840c;}
+.d-spwer-page li:first-child{background-color: #090A07;}
 
 /* 感谢 */
 .thanks-wrap{width: 85%;margin: 10rem auto;}
@@ -224,7 +224,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-3d>div{width: 49%;height: auto;margin-bottom: 0.25rem;}
 	/* 翻页 */
 	.d-spwer-page{bottom: 0.6rem;}
-	.d-spwer-page li{margin: 0 0.25rem;width: 1.25rem;height: 0.25rem;}
+	.d-spwer-page li{margin: 0 0.25rem;width: 1.25rem;height: 0.2rem;}
 	
 	/* 感谢 */
 	.thanks-wrap{margin: 5rem auto;width: 90%;}
