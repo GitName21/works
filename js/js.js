@@ -479,6 +479,31 @@ if (isWechatBrowser()) {
   mobile_code_cont.innerHTML = "长按保存二维码";
 }
 
+// 简历下载弹窗
+const mobilePersonDownload = document.querySelector('.mobile-person-download');
+const bioFooter = document.querySelector('.bio-footer');
+const PersonDownloadWindow = document.querySelector('.PersonDownload-window');
+mobilePersonDownload.addEventListener('click',function(){
+	maskShow(); //遮罩弹起
+	
+	PersonDownloadWindow.style.cssText = "display: flex";
+	
+	PersonDownloadWindow.animate([	//动画
+		{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		},{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+})
+bioFooter.addEventListener('click',function(){
+	alert('该链接已失效！');
+})
 
 
 // 关闭
@@ -529,6 +554,25 @@ mask.onclick = function(){
 		// 或通过添加CSS类（推荐）
 		document.body.classList.add('no-scroll'); /* CSS: .no-scroll { overflow: hidden; } */
 	}
+	
+	// 下载弹窗关闭
+	PersonDownloadWindow.animate([	//动画
+		{
+			opacity: 1,
+			transform:'translate3d(0,0,0)'
+		},{
+			opacity: 0,
+			transform:'translate3d(0,20px,0)'
+		}
+	],{
+		duration:300,
+		fill:'forwards'
+	})
+	// 设置一个定时器
+	var myPerDownload = setTimeout(function () {
+		PersonDownloadWindow.style.cssText = "transform:translate3d(0,0,0),display: none";
+		clearTimeout(myPerDownload);
+	}, 300);
 }
 
 
