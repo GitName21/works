@@ -75,9 +75,9 @@ mobile_navbar_btn.onclick = function(){
 		noScroll();
 		
 		// 按钮动画
-		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg);top: 0.39rem;";
+		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg) translateZ(0);top: 0.39rem;";
 		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;";
-		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg)";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg) translateZ(0)";
 		mobile_navbar_btn3.style.cssText = "opacity: 0";
 		
 		navbar_list.style.cssText = "display: flex";
@@ -129,13 +129,13 @@ mobile_navbar_btn.onclick = function(){
 		scroll();
 		
 		// 按钮动画
-		mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
+		mobile_navbar_btn1.style.cssText = "transform: rotate(0) translateZ(0);top: 0rem;";
 		
 		// if(window.scrollY>600){
 			mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
 		// }
 		
-		mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
 		
 		navbar_wrap.animate([	//导航栏关闭动画
@@ -285,8 +285,8 @@ mobilePerBtn.addEventListener('click', function(){
 	biographical_notes.style.cssText = "display: flex";
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translateX(-100px);transition: all 0.3s linear;";
-	main.style.cssText = "transform: translateX(-100px);transition: all 0.3s linear;";
+	coverWrap.style.cssText = "transform: translate3d(-100px,0,0);transition: all 0.3s linear;";
+	main.style.cssText = "transform: translate3d(-100px,0,0);transition: all 0.3s linear;";
 	
 	biographical_notes.animate([	//动画
 		{
@@ -374,8 +374,8 @@ bioBack.addEventListener('click',(e) => {
 	}
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translateX(0);transition: all 0.3s ease;";
-	main.style.cssText = "transform: translateX(0);transition: all 0.3s ease;";
+	coverWrap.style.cssText = "transform: translate3d(0,0,0);transition: all 0.3s ease;";
+	main.style.cssText = "transform: translate3d(0,0,0);transition: all 0.3s ease;";
 })
 
 // 简历返回提示词的过渡动画
