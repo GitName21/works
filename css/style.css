@@ -117,12 +117,12 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .bio-cont-wrap>div{height: auto;}
 .bio-cont-wrap-left{width: 22%;}
 .bio-cont-wrap-right{width: 68%;}
-.bio-cont-head{width: 6rem;height: auto;background-color: #fff;margin-top: 0.5rem;overflow: hidden;border: #fff solid 0.3125rem;}
+.bio-cont-head{width: 6rem;height: auto;background-color: #fff;margin-top: 0.5rem;overflow: hidden;border: #fff solid 0.3125rem;display: none;}
 .bio-cont-head img{width: 100%;height: auto;}
 /* 介绍 */
 .bio-cont-about{width: 100%;height: auto;display: flex;flex-wrap: nowrap;justify-content: space-between;}
 .bio-cont-about-text{font-size: 0.75rem;margin-top: 1rem;color: #252525;}
-.bio-cont-about-line{width: 0.0625rem;height:50%;background-color: #a7a7a7;margin:1.5rem 0 0 0.5rem;}
+.bio-cont-about-line{width: 4rem;height:0.3125rem;background-color: #a7a7a7;margin:0.8rem 0 0 0rem;border-radius: 1rem;}
 /* 技能 */
 .bio-skill-wrap{width: 100%;height: auto;display: flex;justify-content: space-between;flex-wrap: nowrap;margin: 2rem 0 0 0;}
 .bio-skill-cont{display: flex;flex-wrap: nowrap;align-items: center;color: #252525;}
@@ -280,8 +280,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-wrap>div{width: 100%;}
 	.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
 	.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
-	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 4% 3.5%;border-radius: 0.3125rem;}
 	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
+	.bio-skill-experience-cont-text>p:first-child{color: #848484;font-size: 0.75rem;}
 	.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
 	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
 	.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;display: none;}
@@ -295,6 +296,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.bio-skill-c4d{width: 12rem;}
 	.bio-skill-web{width: 13rem;} */
 	/* 时间 */
+	.bio-skill-experience-cont-time{display: flex;flex-wrap: nowrap;font-size: 0.75rem;border-bottom: 0.0625rem solid #f1f1f1;width: 100%;padding: 0 0 0.6rem 0;}
+	.bio-skill-experience-cont-time p{margin-right: 0.5rem;}
 /* 	.bio-skill-experience-cont-time{position: relative;}
 	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
 	/* 联系 */
