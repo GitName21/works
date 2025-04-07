@@ -285,8 +285,8 @@ mobilePerBtn.addEventListener('click', function(){
 	biographical_notes.style.cssText = "display: flex";
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.3s linear;";
-	main.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.3s linear;";
+	coverWrap.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.2s linear;";
+	main.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.2s linear;";
 	
 	biographical_notes.animate([	//动画
 		{
@@ -374,8 +374,8 @@ bioBack.addEventListener('click',(e) => {
 	}
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.3s ease;";
-	main.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.3s ease;";
+	coverWrap.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.5s ease;";
+	main.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.5s ease;";
 })
 
 // 简历返回提示词的过渡动画
