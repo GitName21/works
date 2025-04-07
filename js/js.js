@@ -75,9 +75,9 @@ mobile_navbar_btn.onclick = function(){
 		noScroll();
 		
 		// 按钮动画
-		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg) translateZ(0);top: 0.39rem;";
-		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;";
-		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg) translateZ(0)";
+		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg) translateZ(0px);top: 0.39rem;";
+		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0px);opacity: 0;visibility: hidden;";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg) translateZ(0px)";
 		mobile_navbar_btn3.style.cssText = "opacity: 0";
 		
 		navbar_list.style.cssText = "display: flex";
@@ -97,11 +97,11 @@ mobile_navbar_btn.onclick = function(){
 		navbar_list.animate([	//导航栏打开，菜单缓动动画
 			{
 				visibility: 'visible',
-				transform: 'translateY(-1rem)',
+				transform: 'translateY(-1rem) translateZ(0px)',
 				opacity: 0
 			},{
 				visibility: 'visible',
-				transform: 'translateY(0rem)',
+				transform: 'translateY(0rem) translateZ(0px)',
 				opacity: 1
 			},
 		],{
@@ -112,11 +112,11 @@ mobile_navbar_btn.onclick = function(){
 		navbar_person.animate([	//头像打开缓动动画
 			{
 				visibility: 'visible',
-				transform: 'translateY(-1rem)',
+				transform: 'translateY(-1rem) translateZ(0px)',
 				opacity: 0
 			},{
 				visibility: 'visible',
-				transform: 'translateY(0rem)',
+				transform: 'translateY(0rem) translateZ(0px)',
 				opacity: 1
 			},
 		],{
@@ -129,13 +129,13 @@ mobile_navbar_btn.onclick = function(){
 		scroll();
 		
 		// 按钮动画
-		mobile_navbar_btn1.style.cssText = "transform: rotate(0) translateZ(0);top: 0rem;";
+		mobile_navbar_btn1.style.cssText = "transform: rotate(0px) translateZ(0px);top: 0rem;";
 		
 		// if(window.scrollY>600){
-			mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+			mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
 		// }
 		
-		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0)";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
 		
 		navbar_wrap.animate([	//导航栏关闭动画
@@ -154,11 +154,11 @@ mobile_navbar_btn.onclick = function(){
 		navbar_list.animate([	//导航栏关闭菜单缓动动画
 			{
 				visibility: 'visible',
-				transform: 'translateY(0rem)',
+				transform: 'translateY(0rem) translateZ(0px)',
 				opacity: 1
 			},{
 				visibility: 'visible',
-				transform: 'translateY(-1rem)',
+				transform: 'translateY(-1rem) translateZ(0px)',
 				opacity: 0
 			},
 		],{
@@ -168,11 +168,11 @@ mobile_navbar_btn.onclick = function(){
 		navbar_person.animate([	//头像关闭缓动动画
 			{
 				visibility: 'visible',
-				transform: 'translateY(0rem)',
+				transform: 'translateY(0rem) translateZ(0px)',
 				opacity: 1
 			},{
 				visibility: 'visible',
-				transform: 'translateY(-1rem)',
+				transform: 'translateY(-1rem) translateZ(0px)',
 				opacity: 0
 			}
 		],{
@@ -211,10 +211,10 @@ navbar_person_head.onclick = function(){
 		biographical_notes.animate([	//动画
 			{
 				opacity: 0,
-				transform:'translate3d(0,20px,0)'
+				transform:'translate3d(0px,20px,0px)'
 			},{
 				opacity: 1,
-				transform:'translate3d(0,0,0)'
+				transform:'translate3d(0px,0px,0px)'
 			},
 		],{
 			duration:300,
@@ -234,10 +234,10 @@ mobile_person_look.addEventListener('click', function(event) {
 	biographical_notes.animate([	//动画
 		{
 			opacity: 0,
-			transform:'translate3d(20px,0,0)'
+			transform:'translate3d(20px,0px,0px)'
 		},{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},
 	],{
 		duration:300,
@@ -285,16 +285,16 @@ mobilePerBtn.addEventListener('click', function(){
 	biographical_notes.style.cssText = "display: flex";
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translate3d(-100px,0,0);transition: all 0.3s linear;";
-	main.style.cssText = "transform: translate3d(-100px,0,0);transition: all 0.3s linear;";
+	coverWrap.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.3s linear;";
+	main.style.cssText = "transform: translate3d(-100px,0px,0px);transition: all 0.3s linear;";
 	
 	biographical_notes.animate([	//动画
 		{
 			opacity: 0,
-			transform:'translate3d(20px,0,0);'
+			transform:'translate3d(20px,0px,0px)'
 		},{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},
 	],{
 		duration:300,
@@ -324,10 +324,10 @@ bioBack.addEventListener('click',(e) => {
 	biographical_notes.animate([	//动画
 		{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},{
 			opacity: 0,
-			transform:'translate3d(20px,0,0)'
+			transform:'translate3d(20px,0px,0px)'
 		}
 	],{
 		duration:300,
@@ -335,7 +335,7 @@ bioBack.addEventListener('click',(e) => {
 	})
 	// 设置一个定时器
 	var myVar_bio = setTimeout(function () {
-		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
+		biographical_notes.style.cssText = "transform:translate3d(0px,0px,0px),display: none";
 		clearTimeout(myVar_bio);
 	}, 300);
 	if(!close){	//解决与导航栏开关冲突问题
@@ -374,8 +374,8 @@ bioBack.addEventListener('click',(e) => {
 	}
 	
 	// 内容跟随动画
-	coverWrap.style.cssText = "transform: translate3d(0,0,0);transition: all 0.3s ease;";
-	main.style.cssText = "transform: translate3d(0,0,0);transition: all 0.3s ease;";
+	coverWrap.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.3s ease;";
+	main.style.cssText = "transform: translate3d(0px,0px,0px);transition: all 0.3s ease;";
 })
 
 // 简历返回提示词的过渡动画
@@ -457,10 +457,10 @@ cover_code.addEventListener('click', (e) => {
 			mobile_code.animate([	//动画
 				{
 					opacity: 0,
-					transform:'translate3d(0,20px,0)'
+					transform:'translate3d(0px,20px,0px)'
 				},{
 					opacity: 1,
-					transform:'translate3d(0,0,0)'
+					transform:'translate3d(0px,0px,0px)'
 				},
 			],{
 				duration:300,
@@ -501,10 +501,10 @@ mobilePersonDownload.addEventListener('click',function(){
 	PersonDownloadWindow.animate([	//动画
 		{
 			opacity: 0,
-			transform:'translate3d(0,20px,0)'
+			transform:'translate3d(0px,20px,0px)'
 		},{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},
 	],{
 		duration:300,
@@ -524,10 +524,10 @@ mask.onclick = function(){
 	mobile_code.animate([	//动画
 		{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},{
 			opacity: 0,
-			transform:'translate3d(0,20px,0)'
+			transform:'translate3d(0px,20px,0px)'
 		}
 	],{
 		duration:300,
@@ -535,7 +535,7 @@ mask.onclick = function(){
 	})
 	// 设置一个定时器
 	var myVar = setTimeout(function () {
-		mobile_code.style.cssText = "transform:translate3d(0,0,0),display: none";
+		mobile_code.style.cssText = "transform:translate3d(0px,0px,0px),display: none";
 		clearTimeout(myVar);
 	}, 300);
 	
@@ -545,10 +545,10 @@ mask.onclick = function(){
 	biographical_notes.animate([	//动画
 		{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},{
 			opacity: 0,
-			transform:'translate3d(0,20px,0)'
+			transform:'translate3d(0px,20px,0px)'
 		}
 	],{
 		duration:300,
@@ -556,7 +556,7 @@ mask.onclick = function(){
 	})
 	// 设置一个定时器
 	var myVar_bio = setTimeout(function () {
-		biographical_notes.style.cssText = "transform:translate3d(0,0,0),display: none";
+		biographical_notes.style.cssText = "transform:translate3d(0px,0px,0px),display: none";
 		clearTimeout(myVar_bio);
 	}, 300);
 	if(!close){	//解决与导航栏开关冲突问题
@@ -569,10 +569,10 @@ mask.onclick = function(){
 	PersonDownloadWindow.animate([	//动画
 		{
 			opacity: 1,
-			transform:'translate3d(0,0,0)'
+			transform:'translate3d(0px,0px,0px)'
 		},{
 			opacity: 0,
-			transform:'translate3d(0,20px,0)'
+			transform:'translate3d(0px,20px,0px)'
 		}
 	],{
 		duration:300,
@@ -580,7 +580,7 @@ mask.onclick = function(){
 	})
 	// 设置一个定时器
 	var myPerDownload = setTimeout(function () {
-		PersonDownloadWindow.style.cssText = "transform:translate3d(0,0,0),display: none";
+		PersonDownloadWindow.style.cssText = "transform:translate3d(0px,0px,0px),display: none";
 		clearTimeout(myPerDownload);
 	}, 300);
 }
@@ -820,7 +820,7 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 		
 		// console.log('出发')
 		
-		mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";	//显示移动端顶部简历按钮
+		mobilePerBtn.style.cssText = "transform: translate3d(0px,0px,0px);opacity: 1;";	//显示移动端顶部简历按钮
 		
 		// 滚动
 		const main_title = document.querySelectorAll('.main-title')[listIndex];
@@ -843,8 +843,8 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 		const element = isCSS1Compat ? document.documentElement : document.body;
 		
 		if(element.clientWidth <= 767){	//如果是移动端执行
-			mobile_navbar_btn1.style.cssText = "transform: rotate(0);top: 0rem;";
-			mobile_navbar_btn2.style.cssText = "transform: rotate(0)";
+			mobile_navbar_btn1.style.cssText = "transform: rotate(0) translateZ(0px);top: 0rem;";
+			mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
 			mobile_navbar_btn3.style.cssText = "opacity: 1";
 			
 			navbar_wrap.animate([	//导航栏关闭动画
@@ -863,11 +863,11 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 			navbar_list.animate([	//导航栏关闭菜单缓动动画
 				{
 					visibility: 'visible',
-					transform: 'translateY(0rem)',
+					transform: 'translateY(0rem) translateZ(0px)',
 					opacity: 1
 				},{
 					visibility: 'visible',
-					transform: 'translateY(-1rem)',
+					transform: 'translateY(-1rem) translateZ(0px)',
 					opacity: 0
 				},
 			],{
@@ -877,11 +877,11 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 			navbar_person.animate([	//头像关闭缓动动画
 				{
 					visibility: 'visible',
-					transform: 'translateY(0rem)',
+					transform: 'translateY(0rem) translateZ(0px)',
 					opacity: 1
 				},{
 					visibility: 'visible',
-					transform: 'translateY(-1rem)',
+					transform: 'translateY(-1rem) translateZ(0px)',
 					opacity: 0
 				}
 			],{
@@ -907,10 +907,10 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 // 移动端顶部简历按钮开关
 function mobilePerBtnS(){
 	if(window.scrollY<600){
-		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0);opacity: 0;visibility: hidden;";
+		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0px);opacity: 0;visibility: hidden;";
 	}else{
 		  
-		mobilePerBtn.style.cssText = "transform: translateX(0) translateZ(0);opacity: 1;";
+		mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
 	}
 }
 // if(window.scrollY<600){
