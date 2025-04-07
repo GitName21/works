@@ -715,20 +715,28 @@ let progressBarWidth;	//进度条宽度
 let webScrollHeight;
 
 window.addEventListener('DOMContentLoaded', () => {
+  const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
   const webHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);	//获取网页的高度
   const windowHeight = window.innerHeight;	// 视口高度（不含滚动条）
   webScrollHeight = webHeight - windowHeight;	//网页滚动区域高度 = 获取网页的高度-视口高度
-  console.log("网页高度:", webHeight);
-  console.log("网页滚动区域高度:", webScrollHeight);
+  // console.log("网页高度:", webHeight);
+  // console.log("网页滚动区域高度:", webScrollHeight);
   
-  progressBarWidth = (window.scrollY / webScrollHeight) * 100;
+  progressBarWidth = (scrollY / webScrollHeight) * 100;
   progressBar.style.cssText = "width:" + progressBarWidth + "%";
 });
 
 function ProgressBar(){
-	console.log("网页滚动了:", window.scrollY);
-	progressBarWidth = (window.scrollY / webScrollHeight) * 100;
-	console.log("进度条宽度应该是:", progressBarWidth);
+	const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+	
+	// 解决移动端浏览器滚动时搜索框收入导致浏览器可视高度变化
+	const webHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);	//获取网页的高度
+	const windowHeight = window.innerHeight;	// 视口高度（不含滚动条）
+	webScrollHeight = webHeight - windowHeight;	//网页滚动区域高度 = 获取网页的高度-视口高度
+	
+	// console.log("网页滚动了:", window.scrollY);
+	progressBarWidth = (scrollY / webScrollHeight) * 100;
+	// console.log("进度条宽度应该是:", progressBarWidth);
 	
 	progressBar.style.cssText = "width:" + progressBarWidth + "%";
 }
