@@ -377,7 +377,7 @@ biographical_notes.addEventListener('scroll',function(){
 	if(TipsScrollTopValue>=200){
 		TipsScrollTopValue = 200;
 	}
-	console.log(TipsScrollTopValue)
+	// console.log(TipsScrollTopValue)
 	TipsOpacity = TipsScrollTopValue / 200;
 	
 	bioBackTips.style.cssText = "opacity: " + TipsOpacity;
