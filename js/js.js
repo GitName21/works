@@ -249,6 +249,8 @@ mobile_person_look.addEventListener('click', function(event) {
 const mobilePerBtn1 =document.querySelector('.mobile-per-btn-1');
 const mobilePerBtn2 =document.querySelector('.mobile-per-btn-2');
 const mobilePerBtn3 =document.querySelector('.mobile-per-btn-3');
+const coverWrap =document.querySelector('.cover-wrap');
+const main =document.querySelector('.main');
 // let mobilePerBtn
 mobilePerBtn.addEventListener('click', function(){
 	// 顶部导航按钮动画
@@ -282,10 +284,14 @@ mobilePerBtn.addEventListener('click', function(){
 	// 简历动画
 	biographical_notes.style.cssText = "display: flex";
 	
+	// 内容跟随动画
+	coverWrap.style.cssText = "transform: translateX(-100px);transition: all 0.3s linear;";
+	main.style.cssText = "transform: translateX(-100px);transition: all 0.3s linear;";
+	
 	biographical_notes.animate([	//动画
 		{
 			opacity: 0,
-			transform:'translate3d(20px,0,0)'
+			transform:'translate3d(20px,0,0);'
 		},{
 			opacity: 1,
 			transform:'translate3d(0,0,0)'
@@ -366,6 +372,10 @@ bioBack.addEventListener('click',(e) => {
 	if(close){
 		scroll();
 	}
+	
+	// 内容跟随动画
+	coverWrap.style.cssText = "transform: translateX(0);transition: all 0.3s ease;";
+	main.style.cssText = "transform: translateX(0);transition: all 0.3s ease;";
 })
 
 // 简历返回提示词的过渡动画
