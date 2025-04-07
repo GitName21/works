@@ -600,7 +600,7 @@ let side_index = 0;
 side_li.forEach((element, index) => {
     element.addEventListener('click', function() {
 		side_index = index;
-		console.log('点击元素的索引是：' +side_index)
+		// console.log('点击元素的索引是：' +side_index)
 		
         // 移除所有元素的样式
         side_li.forEach(el => el.classList.remove("side-focus"));
