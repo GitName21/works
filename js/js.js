@@ -699,6 +699,7 @@ window.addEventListener('scroll', () => {
     updateActiveMenu();
 	scrollShow();       // 3. 实际执行任务
 	// mobilePerBtnS();
+	ProgressBar();
 	
     isScrolling = false;
     lastScrollY = currentScrollY;
@@ -707,6 +708,32 @@ window.addEventListener('scroll', () => {
 
   
 });
+
+//进度条 
+const progressBar = document.querySelector('.progressBar');
+let progressBarWidth;	//进度条宽度
+let webScrollHeight;
+
+window.addEventListener('DOMContentLoaded', () => {
+  const webHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);	//获取网页的高度
+  const windowHeight = window.innerHeight;	// 视口高度（不含滚动条）
+  webScrollHeight = webHeight - windowHeight;	//网页滚动区域高度 = 获取网页的高度-视口高度
+  console.log("网页高度:", webHeight);
+  console.log("网页滚动区域高度:", webScrollHeight);
+  
+  progressBarWidth = (window.scrollY / webScrollHeight) * 100;
+  progressBar.style.cssText = "width:" + progressBarWidth + "%";
+});
+
+function ProgressBar(){
+	console.log("网页滚动了:", window.scrollY);
+	progressBarWidth = (window.scrollY / webScrollHeight) * 100;
+	console.log("进度条宽度应该是:", progressBarWidth);
+	
+	progressBar.style.cssText = "width:" + progressBarWidth + "%";
+}
+
+
 
 // 更新高亮函数（优化判断逻辑）
 function updateActiveMenu() {

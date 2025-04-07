@@ -10,6 +10,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 导航 */
 .navbar-wrap{width: 100%;height: auto;}
+/* 进度条 */
+.progressBar{display: none;}
 /* 菜单内容 */
 .navbar-box{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
 /* 头像 */
@@ -170,6 +172,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	}
 	/* 导航 */
 	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
+	/* 进度条 */
+	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #da840c;height: 0.125rem;transition: all 0.1s ease;}
 	/* 菜单内容 */
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
