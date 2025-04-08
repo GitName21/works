@@ -196,7 +196,7 @@ function mobileNavShow(e){
 	const element = isCSS1Compat ? document.documentElement : document.body;
 	
 	if(element.clientWidth >= 767){	//如果不是移动端执行
-		console.log('移动端导航栏按钮没点击+已经不在移动端');
+		// console.log('移动端导航栏按钮没点击+已经不在移动端');
 		scroll();
 		
 		// 按钮动画
