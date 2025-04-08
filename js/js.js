@@ -1016,7 +1016,7 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
   Pages.forEach((page, index) => {
     page.addEventListener('click', function() {
       pageNow = index;
-      spwer.style.left = `-${pageNow * 100}%`;
+      spwer.style.transform = `translateX(-${pageNow * 100}%)`;
       
       // 更新当前轮播的分页样式
       Pages.forEach(el => el.style.backgroundColor = '#fff');
@@ -1036,7 +1036,7 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
 	leftNumber = parseFloat(leftValue) || 0;
 	// console.log('目前的左值是：' + leftNumber)
 	
-    spwer.style.transition = 'none'; // 拖动时禁用动画'
+    spwer.style.transition = 'all 0 linear'; // 拖动时禁用动画，这里不能使用spwer.style.transition = '0'，否则会导致下方触摸送开时动画时间为0
   });
 
   spwer.addEventListener('touchmove', function(e) {
@@ -1045,14 +1045,16 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
     if (!isDragging) return;
 	
     moveX = e.touches[0].clientX - startX;
-	moveX = leftNumber+moveX;	//要加上当前左边的值，否则会跳转到第一张
+	moveX = leftNumber + moveX;	//要加上当前左边的值，否则会跳转到第一张
 	// console.log('手指滑动了：' + moveX)
 		
-    spwer.style.left = `${moveX}px`;
+    // spwer.style.left = `${moveX}px`;
+	spwer.style.transform = `translateX(${moveX}px)`;
 
   });
 
   spwer.addEventListener('touchend', function(e) {
+	  
     if (!isDragging) return;
     isDragging = false;
 	
@@ -1073,9 +1075,11 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
 				pageNow = 0;
 			}
 		}
+		spwer.style.transition = 'all 0.3s linear'; // 松开时启动动画'
 		// console.log('当前引索是：' + pageNow)
 		TdLeft = pageNow*100;
-		spwer.style.cssText = "left:" + -TdLeft + "%";
+		// spwer.style.cssText = "left:" + -TdLeft + "%";
+		spwer.style.transform = `translateX(-${TdLeft}%)`;
 		
 		Pages.forEach(el => {
 			el.style.cssText = "background-color: #fff;";
