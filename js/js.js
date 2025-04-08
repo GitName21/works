@@ -76,9 +76,10 @@ mobile_navbar_btn.onclick = function(){
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(45deg) translateZ(0px);top: 0.39rem;";
-		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0px);opacity: 0;visibility: hidden;";
 		mobile_navbar_btn2.style.cssText = "transform: rotate(-45deg) translateZ(0px)";
 		mobile_navbar_btn3.style.cssText = "opacity: 0";
+		
+		mobilePerBtn.style.cssText = "transform: translateX(5px) translateZ(0px);opacity: 0;visibility: hidden;";
 		
 		navbar_list.style.cssText = "display: flex";
 		navbar_person.style.cssText = "display: flex";
@@ -130,13 +131,10 @@ mobile_navbar_btn.onclick = function(){
 		
 		// 按钮动画
 		mobile_navbar_btn1.style.cssText = "transform: rotate(0px) translateZ(0px);top: 0rem;";
-		
-		// if(window.scrollY>600){
-			mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
-		// }
-		
 		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
 		mobile_navbar_btn3.style.cssText = "opacity: 1";
+		
+		mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
 		
 		navbar_wrap.animate([	//导航栏关闭动画
 			{
@@ -191,8 +189,53 @@ mobile_navbar_btn.onclick = function(){
 		close = true;
 	}
 }
+// PC窗口变化时触发
+function mobileNavShow(e){
+	// 不含滚动条的尺寸，根据文档模式判断
+	const isCSS1Compat = (document.compatMode === "CSS1Compat");
+	const element = isCSS1Compat ? document.documentElement : document.body;
+	
+	if(element.clientWidth >= 767){	//如果不是移动端执行
+		console.log('移动端导航栏按钮没点击+已经不在移动端');
+		scroll();
+		
+		// 按钮动画
+		mobile_navbar_btn1.style.cssText = "transform: rotate(0px) translateZ(0px);top: 0rem;";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
+		mobile_navbar_btn3.style.cssText = "opacity: 1";
+		
+		mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
+		
+		navbar_list.style.cssText = "display: flex;visibility: visible;transform: translateY(0rem) translateZ(0px);opacity: 1";
+		navbar_person.style.cssText = "display: flex;visibility: visible;transform: translateY(0rem) translateZ(0px);opacity: 1";
+		navbar_wrap.animate([	//导航栏关闭动画
+			{
+				height: '100vh',
+			},{
+				height: 'auto',
+			}
+		],{
+			duration:0,
+			fill:'forwards'
+		})
+		
+		close = true;
+	}else{
+		navbar_list.style.cssText = "display: none;";
+		navbar_person.style.cssText = "display: none;";
+	}
+}
+// 防抖函数（延迟执行）
+function debounce(func, delay = 250) {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+// 绑定防抖后的 resize 处理函数
+window.addEventListener('resize', debounce(mobileNavShow));
 
- 
 
 // PC端简历
 navbar_person_head = document.querySelector('.navbar-person-head');
@@ -203,7 +246,7 @@ navbar_person_head.onclick = function(){
 	const isCSS1Compat = (document.compatMode === "CSS1Compat");
 	const element = isCSS1Compat ? document.documentElement : document.body;
 	
-	if(element.clientWidth >= 767){	//如果是移动端执行
+	if(element.clientWidth >= 767){	//如果不是移动端执行
 		maskShow();
 		
 		biographical_notes.style.cssText = "display: flex";
