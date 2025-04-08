@@ -847,10 +847,18 @@ function updateActiveMenu() {
   });
 
   if (closestIndex !== -1) {
+	  // PC端侧边栏菜单高亮
     side_li.forEach((li, index) => {
       li.classList.toggle('side-focus', index === closestIndex); // ✅ 立即切换
-	  side_index = closestIndex;
     });
+	
+	// 移动端菜单高亮
+	const navbarListMobile = document.querySelectorAll('.navbar-list li');
+	navbarListMobile.forEach((li,index) => {
+		li.classList.toggle('navbar-list-focus',index === closestIndex);
+	});
+	
+	side_index = closestIndex;
   }
 }
 
