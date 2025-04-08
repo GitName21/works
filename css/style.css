@@ -81,7 +81,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-content-3d-title p:last-child{font-size: 0.75rem;color: #545454;}
 .main-content-3d-img{margin-bottom: 0.5rem;position: relative;overflow: hidden;}
 /* 轮播 */
-.main-content-3d-3d-spwer{display: flex;flex-wrap: nowrap;position: relative;left: 0;}
+.main-content-3d-3d-spwer{display: flex;flex-wrap: nowrap;position: relative;left: 0;width:auto;transition: all 0.3s linear;}
 .main-content-3d-3d-spwer div{flex-shrink: 0;width: 100%;height: auto;}
 /* 翻页 */
 .d-spwer-page{position: absolute;bottom: 1rem;display: flex;flex-wrap: nowrap;width: 100%;height:auto;justify-content: center;left: 0;}
