@@ -206,8 +206,38 @@ function mobileNavShow(e){
 		
 		mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
 		
-		navbar_list.style.cssText = "display: flex;visibility: visible;transform: translateY(0rem) translateZ(0px);opacity: 1";
-		navbar_person.style.cssText = "display: flex;visibility: visible;transform: translateY(0rem) translateZ(0px);opacity: 1";
+		navbar_list.style.cssText = "display: flex;";
+		navbar_person.style.cssText = "display: flex;";
+		navbar_list.animate([	//导航栏打开，菜单缓动动画
+			{
+				visibility: 'visible',
+				transform: 'translateY(-1rem) translateZ(0px)',
+				opacity: 0
+			},{
+				visibility: 'visible',
+				transform: 'translateY(0rem) translateZ(0px)',
+				opacity: 1
+			},
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+		
+		navbar_person.animate([	//头像打开缓动动画
+			{
+				visibility: 'visible',
+				transform: 'translateY(-1rem) translateZ(0px)',
+				opacity: 0
+			},{
+				visibility: 'visible',
+				transform: 'translateY(0rem) translateZ(0px)',
+				opacity: 1
+			},
+		],{
+			duration:300,
+			fill:'forwards'
+		})
+		
 		navbar_wrap.animate([	//导航栏关闭动画
 			{
 				height: '100vh',
@@ -223,6 +253,10 @@ function mobileNavShow(e){
 	}else{
 		navbar_list.style.cssText = "display: none;";
 		navbar_person.style.cssText = "display: none;";
+		close = true;
+		// 移除监听器
+		window.removeEventListener('resize', mobileNavShow);
+
 	}
 }
 // 防抖函数（延迟执行）
