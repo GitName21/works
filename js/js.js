@@ -947,7 +947,7 @@ navbarList.forEach((item,index)=>{	//遍历所有li，item:li元素，index引�
 		const isCSS1Compat = (document.compatMode === "CSS1Compat");
 		const element = isCSS1Compat ? document.documentElement : document.body;
 		
-		if(element.clientWidth <= 767){	//如果是移动端执行
+		if(element.clientWidth <= 992){	//如果是移动端执行
 			mobile_navbar_btn1.style.cssText = "transform: rotate(0) translateZ(0px);top: 0rem;";
 			mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
 			mobile_navbar_btn3.style.cssText = "opacity: 1";
