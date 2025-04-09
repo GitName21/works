@@ -106,9 +106,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 返回按钮 */
 .bio-back{display: none;}
 .hello{width: 100%;height: auto;}
-.hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width: 15rem;justify-content: space-between;}
+.hello>div:first-child{display: flex;align-items: flex-end;flex-wrap: nowrap;width:fit-content;justify-content: space-between;}
 .hello>div:first-child>div:first-child{font-size: 1.75rem;font-weight: bold;}
-.hello>div:first-child>div:last-child{font-weight: bold;margin-bottom: 0.2rem;}
+.hello>div:first-child>div:last-child{font-weight: bold;margin: 0 0 0.2rem 0.5rem;}
 .bio-code{background-color: #252525;width:auto;height: 2.5rem;color: #fff;text-transform: uppercase;font-size: 1.75rem;font-weight: bold;padding-left: 0.5rem;border-radius: 0.3125rem;margin-top: 0.5rem;position: relative;}
 .bio-code-img{position: absolute;right:1rem;top:-1.5rem;background-color: #fff;width: 5rem;height: 5rem;border: 0.3rem solid #252525;}
 .bio-code-img img{width: 100%;height: auto;}
