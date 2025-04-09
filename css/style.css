@@ -26,7 +26,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 移动端菜单展开按钮 */
 .mobile-navbar{display: none;-webkit-tap-highlight-color:transparent;}
 /* 简历、扫码*/
-.mobile-per-btn{display: none;}	
+.mobile-per-btn{display: none;}
 /* 简历下载 */
 .PersonDownload-window{display: none;}
 
@@ -383,73 +383,90 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code img{width: 25%;height: auto;}
 	
 	/* 简历 */
-		.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
-		/* 简历下载 */
-		.PersonDownload-window{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
-		.PersonDownload-window div{width: 100%;display: flex;justify-content: center;}
-		.PersonDownload-window div:last-child{margin-top: 1rem;}
+	.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
+	/* 简历下载 */
+	.PersonDownload-window{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
+	.PersonDownload-window div{width: 100%;display: flex;justify-content: center;}
+	.PersonDownload-window div:last-child{margin-top: 1rem;}
 		
-		/* 返回 */
-		.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;display: block;}
-		.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;width: -moz-fit-content;width: -webkit-fit-content;width: fit-content;}
-		.bio-back div svg{margin:0 0.25rem 0 0rem;}
-		.bio-back span{opacity: 0;}
-		
-		.hello{padding: 0 5%;width: 90%;}
-		
-		.bio-code-img{display: none;}
-		.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;padding: 0 5%;width: 90%;}
-		.bio-cont-wrap-left{width: 100%;}
-		.bio-cont-wrap-right{width: 100%;}
-		.bio-cont-about-text{background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;line-height: 1.35rem;}
-		.bio-skill-wrap{flex-wrap: wrap;}
-		.bio-skill-wrap>div:first-child{margin: 0 0 1rem 0;display: flex;flex-wrap: nowrap;}
-		.bio-skill-wrap>div:first-child>p:first-child{margin-right: 0.5rem;}
-		.bio-skill-wrap>div:first-child>p:last-child{color: #b9b9b9;}
-		.bio-skill-wrap>div{width: 100%;}
-		.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
-		.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
-		.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 4% 3.5%;border-radius: 0.3125rem;}
-		.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
-		.bio-skill-experience-cont-text>p:first-child{color: #848484;font-size: 0.75rem;}
-		.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
-		.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
-		.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;display: none;}
-		.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
-		.bio-skill-experience>div:first-child>p:first-child{margin-right: 0.5rem;}
-		.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
-		.bio-skill-cont{padding: 3.5%;background-color: #fff;width: 93%;margin-bottom: 0.5rem;border-radius: 0.3125rem;}
-		/* 技能 */
-	/* 	.bio-skill-ps{width: 13rem;}
-		.bio-skill-ai{width: 11rem;}
-		.bio-skill-c4d{width: 12rem;}
-		.bio-skill-web{width: 13rem;} */
-		/* 时间 */
-		.bio-skill-experience-cont-time{display: flex;flex-wrap: nowrap;font-size: 0.75rem;border-bottom: 0.0625rem solid #f1f1f1;width: 100%;padding: 0 0 0.6rem 0;}
-		.bio-skill-experience-cont-time p{margin-right: 0.5rem;}
-	/* 	.bio-skill-experience-cont-time{position: relative;}
-		.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
-		/* 联系 */
-		.bio-contact-title{display: flex;flex-wrap: nowrap;}
-		.bio-contact-title>P:first-child{margin-right: 0.5rem;}
-		.bio-contact-title>P:last-child{color: #b9b9b9;}
-		
-		/* 底下 */
-		.bio-footer{width:90%;margin: auto;}
-		.bio-footer-tips{margin-bottom: 6rem;}
-		
-		/* 侧边栏 */
-		.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
-		.side-wrap ul{display: none;}
-		.side-wrap div{background-color: rgba(0, 0, 0, 0.5);border: 0.0625rem solid #fff;margin: 0.5rem 0;border-radius: 0.5rem;width: 50%;}
+	/* 返回 */
+	.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;display: block;}
+	.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;width: -moz-fit-content;width: -webkit-fit-content;width: fit-content;}
+	.bio-back div svg{margin:0 0.25rem 0 0rem;}
+	.bio-back span{opacity: 0;}
+	
+	.hello{padding: 0 5%;width: 90%;}
+	
+	.bio-code-img{display: none;}
+	.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;padding: 0 5%;width: 90%;}
+	.bio-cont-wrap-left{width: 100%;}
+	.bio-cont-wrap-right{width: 100%;}
+	.bio-cont-about-text{background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;line-height: 1.35rem;}
+	.bio-skill-wrap{flex-wrap: wrap;}
+	.bio-skill-wrap>div:first-child{margin: 0 0 1rem 0;display: flex;flex-wrap: nowrap;}
+	.bio-skill-wrap>div:first-child>p:first-child{margin-right: 0.5rem;}
+	.bio-skill-wrap>div:first-child>p:last-child{color: #b9b9b9;}
+	.bio-skill-wrap>div{width: 100%;}
+	.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
+	.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 4% 3.5%;border-radius: 0.3125rem;}
+	.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
+	.bio-skill-experience-cont-text>p:first-child{color: #848484;font-size: 0.75rem;}
+	.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
+	.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
+	.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;display: none;}
+	.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
+	.bio-skill-experience>div:first-child>p:first-child{margin-right: 0.5rem;}
+	.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
+	.bio-skill-cont{padding: 3.5%;background-color: #fff;width: 93%;margin-bottom: 0.5rem;border-radius: 0.3125rem;}
+	/* 技能 */
+/* 	.bio-skill-ps{width: 13rem;}
+	.bio-skill-ai{width: 11rem;}
+	.bio-skill-c4d{width: 12rem;}
+	.bio-skill-web{width: 13rem;} */
+	/* 时间 */
+	.bio-skill-experience-cont-time{display: flex;flex-wrap: nowrap;font-size: 0.75rem;border-bottom: 0.0625rem solid #f1f1f1;width: 100%;padding: 0 0 0.6rem 0;}
+	.bio-skill-experience-cont-time p{margin-right: 0.5rem;}
+/* 	.bio-skill-experience-cont-time{position: relative;}
+	.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
+	/* 联系 */
+	.bio-contact-title{display: flex;flex-wrap: nowrap;}
+	.bio-contact-title>P:first-child{margin-right: 0.5rem;}
+	.bio-contact-title>P:last-child{color: #b9b9b9;}
+	
+	/* 底下 */
+	.bio-footer{width:90%;margin: auto;}
+	.bio-footer-tips{margin-bottom: 6rem;}
+	
+	/* 侧边栏 */
+	.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
+	.side-wrap ul{display: none;}
+	.side-wrap div{background-color: rgba(0, 0, 0, 0.5);border: 0.0625rem solid #fff;margin: 0.5rem 0;border-radius: 0.5rem;width: 50%;}
 }
 
 /* 中等屏幕（桌面显示器，大于等于 992px） */
 @media (min-width:992px) and (max-width:1200px) {
+	/* 简历 */
+	.biographical-notes-wrap{width: 80%;height: 70vh;margin-left: calc((100% - 80% - 2rem - 2rem) / 2);bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: block;}
+	.bio-cont-wrap{margin-top: 2rem;}
+	
+	/* 技能 */
+	.bio-skill-wrap>div:first-child{width: 10%;}
+	.bio-skill-wrap>div{width: 38%;}
 
+	/* 经历 */
+	.bio-skill-experience{margin-top: 2.5rem;}
+	.bio-skill-experience>div:first-child{width: 20%;}
+	.bio-skill-experience-cont-tab{flex-wrap: wrap;}
+	.bio-skill-experience-cont-text{width: 100%;}
+	.bio-skill-experience-cont-text>p:last-child{margin-top: 0.5rem;line-height: 1.25rem;}
+	.bio-skill-experience-cont{display: flex;flex-wrap: wrap;width: 100%;}
+	.bio-skill-experience-cont-time{display: flex;flex-wrap: nowrap;}
+	.bio-skill-experience-cont-time>p:first-child{margin-right: 1rem;}
+	.bio-skill-cont>div:first-child{width: 10rem;}
 }
 
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width: 1200px) and (max-width:1850px) {
-
+	
 }
