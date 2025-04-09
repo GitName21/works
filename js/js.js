@@ -195,7 +195,7 @@ function mobileNavShow(e){
 	const isCSS1Compat = (document.compatMode === "CSS1Compat");
 	const element = isCSS1Compat ? document.documentElement : document.body;
 	
-	if(element.clientWidth >= 767){	//如果不是移动端执行
+	if(element.clientWidth >= 992){	//如果不是移动端执行
 		// console.log('移动端导航栏按钮没点击+已经不在移动端');
 		scroll();
 		
@@ -251,8 +251,28 @@ function mobileNavShow(e){
 		
 		close = true;
 	}else{
+		scroll();	//恢复滚动
+		
 		navbar_list.style.cssText = "display: none;";
 		navbar_person.style.cssText = "display: none;";
+		
+		// 展开按钮恢复关闭状态
+		mobile_navbar_btn1.style.cssText = "transform: rotate(0px) translateZ(0px);top: 0rem;";
+		mobile_navbar_btn2.style.cssText = "transform: rotate(0) translateZ(0px)";
+		mobile_navbar_btn3.style.cssText = "opacity: 1";
+		mobilePerBtn.style.cssText = "transform: translateX(0px) translateZ(0px);opacity: 1;";
+		
+		navbar_wrap.animate([	//导航栏关闭动画
+			{
+				height: '100vh',
+			},{
+				height: 'auto',
+			}
+		],{
+			duration:0,
+			fill:'forwards'
+		})
+		
 		close = true;
 		// 移除监听器
 		window.removeEventListener('resize', mobileNavShow);
@@ -524,7 +544,7 @@ cover_code.addEventListener('click', (e) => {
 	const isCSS1Compat = (document.compatMode === "CSS1Compat");
 	const element = isCSS1Compat ? document.documentElement : document.body;
 	
-	if(element.clientWidth <= 767){	//如果是移动端执行
+	if(element.clientWidth <= 767 || element.clientWidth <= 992){	//如果是移动端执行
 		if (Date.now() - startTime < 200) { // 判断点击时长
 		  // 执行点击逻辑
 			maskShow();

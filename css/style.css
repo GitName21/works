@@ -318,7 +318,130 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 小屏幕（平板，大于等于 768px） */
 @media (min-width: 768px) and (max-width:992px) {
+	/* 针对所有元素 */
+	* {
+	  -webkit-tap-highlight-color: transparent;
+	}
+	/* 导航 */
+	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
+	/* 进度条 */
+	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #da840c;height: 0.125rem;transition: all 0.1s linear;}
+	/* 菜单内容 */
+	.navbar-box{flex-wrap: wrap;width: 90%;}
+	/* 列表 */
+	.navbar-list{flex-wrap: wrap;width: 100%;order: 1;display: none;}
+	.navbar-list-focus{border: 0.0625rem solid #5e5e5e;color: #fff;}
+	.navbar-list>li{width: 96%;margin: 0;padding: 0.8rem 0 0.8rem 0;background-color: rgba(255, 255, 255, 0.1);border-radius: 0.625rem;margin-bottom: 0.5rem;padding-left: 4%;}
 	
+	.mobile-navbar-title{font-size: 1.5rem;color: #fff;font-weight: bold;margin-bottom: 1rem;display: ;opacity: 1;visibility: visible;width: fit-content;transition: 0.5s all ease;}
+	/* 移动端菜单展开按钮 */
+	.mobile-navbar{width: 100%;height: 3.5rem;cursor: pointer;display: flex;align-items: center;justify-content: space-between;}
+	/* 简历、扫码*/
+	.mobile-nav-right{display: flex;flex-wrap: wrap;align-items: center;}
+	.mobile-per-btn{width: 0.8rem;height: 0.8rem;margin-right: 1rem;border: 0.125rem solid #fff;border-radius: 0.1rem;transition: all 0.3s ease;position: relative;display: block;}
+	.mobile-per-btn div{height: 0.0625rem;background-color: #fff;position: absolute;}
+	.mobile-per-btn-1{width: 0.7rem;left: 0;top: 0.125rem;}
+	.mobile-per-btn-2{width: 0.5rem;left: 0;top: 0.3125rem;}
+	.mobile-per-btn-3{width: 0.6rem;left: 0;top: 0.5rem;}
+	
+	.home-title{color: #fff;font-weight: bold;display: flex;flex-wrap: nowrap;align-items: center;position: relative;}
+	.home-title svg{margin: 0.1rem 0 0 -0.1rem;}
+	.home-title::before{width: 40%;height: 0.1rem;left: 30%;bottom: -0.5rem;background-color: #da840c;content: '';position: absolute;border-radius: 1rem;}
+	.show-button{width: 1.2rem;height: 0.9rem;position: relative;}
+	.show-button>li{width: 1.2rem;height: 0.12rem;background-color: #fff;position: absolute;transition: all 0.3s ease;}
+	.show-button>li:first-child{top: 0;}
+	.show-button>li:nth-child(2){top: 0.39rem;}
+	.show-button>li:last-child{bottom: 0;}
+	/* 头像 */
+	.navbar-person{width: 96%;display: flex;flex-direction: row;display: none;border: 0.0625rem solid #5e5e5e;border-radius: 0.625rem;height: 4rem;margin: 1rem 0 1rem 0;align-items: center;padding:0 2%;background-color: rgba(255, 255, 255, 0.1)}
+	.mobile-person-btn{display: block;color:#fff;display: flex;justify-content: space-between;align-items: center;width: 90%;}
+	.mobile-person-menu{display: flex;flex-wrap: nowrap;align-items: center;font-size: 0.75rem;}
+	.mobile-person-menu div{display: flex;align-items: center;margin-left: 0.8rem;}
+	.mobile-person-menu svg{margin-left: 0.2rem;}
+	.mobile-person-name p:last-child{font-size: 0.75rem;color: #a7a7a7;}
+	.mobile-person-name{line-height: 1rem;margin-left: 0.5rem;}
+	
+	/* 主题 */
+	.main-title{flex-wrap: wrap;justify-content: center;width: 90%;margin-bottom: 0;}
+	.main-describe{width: 90%;}
+	/* 内容 */
+	.main-content{width: 90%;}
+	.main-content-personal div{width: 20%;height: auto;margin-bottom:0rem;}
+	
+	/* 封面 */
+	.cover-wrap{margin: 7rem auto 5rem auto;width: 90%;}
+	.cover-addr{border-left: 0;text-align: left;}
+	.cover-title{margin: 1rem 0 1rem 0;}
+	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
+	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
+	.cover-contact{justify-content: center;}
+	.cover-code-img{display: none;}
+	/* 二维码 */
+	.mobile-code{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
+	.mobile-code div{display: flex;justify-content: center;flex-wrap: wrap;width: 100%;}
+	.mobile-code div:last-child{margin-top: 1rem;}
+	.mobile-code img{width: 25%;height: auto;}
+	
+	/* 简历 */
+		.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
+		/* 简历下载 */
+		.PersonDownload-window{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
+		.PersonDownload-window div{width: 100%;display: flex;justify-content: center;}
+		.PersonDownload-window div:last-child{margin-top: 1rem;}
+		
+		/* 返回 */
+		.bio-back{width: 90%;height: auto;border-bottom: 0rem solid #cfcfcf;color: #252525;position: sticky;top:-2rem;padding: 1.6rem 5% 1rem 5%;background-color: #e7f0fe;z-index: 99;font-size: 1.125rem;font-weight: bold;display: block;}
+		.bio-back div{display: flex;align-items: center;flex-wrap: nowrap;border-radius: 0.3125rem;width: -moz-fit-content;width: -webkit-fit-content;width: fit-content;}
+		.bio-back div svg{margin:0 0.25rem 0 0rem;}
+		.bio-back span{opacity: 0;}
+		
+		.hello{padding: 0 5%;width: 90%;}
+		
+		.bio-code-img{display: none;}
+		.bio-cont-wrap{flex-wrap: wrap;margin-top: 2rem;padding: 0 5%;width: 90%;}
+		.bio-cont-wrap-left{width: 100%;}
+		.bio-cont-wrap-right{width: 100%;}
+		.bio-cont-about-text{background-color: #fff;padding: 3.5%;border-radius: 0.3125rem;line-height: 1.35rem;}
+		.bio-skill-wrap{flex-wrap: wrap;}
+		.bio-skill-wrap>div:first-child{margin: 0 0 1rem 0;display: flex;flex-wrap: nowrap;}
+		.bio-skill-wrap>div:first-child>p:first-child{margin-right: 0.5rem;}
+		.bio-skill-wrap>div:first-child>p:last-child{color: #b9b9b9;}
+		.bio-skill-wrap>div{width: 100%;}
+		.bio-skill-experience{flex-wrap: wrap;margin-top: 2rem;width: 100%;padding-bottom: 0rem;}
+		.bio-skill-experience>div:first-child{margin-bottom: 1rem;width: 100%;}
+		.bio-skill-experience-cont-tab{flex-wrap: wrap;width: 93%;margin-bottom: 0.5rem;background-color: #fff;padding: 4% 3.5%;border-radius: 0.3125rem;}
+		.bio-skill-experience-cont-text{margin: 0.5rem 0 0 0;width: 100%;}
+		.bio-skill-experience-cont-text>p:first-child{color: #848484;font-size: 0.75rem;}
+		.bio-skill-experience-cont-text>p:last-child{line-height: 1.25rem;margin:1rem 0 0 0;}
+		.bio-cont-head{width: 4rem;height: 4rem;margin-top: 0;border-radius: 0.3125rem;display: none;}
+		.bio-cont-about-line{width: 2rem;height:0.2rem;background-color: #a7a7a7;margin:1rem 0 0 0;display: none;}
+		.bio-skill-experience>div:first-child{display: flex;flex-wrap: nowrap;}
+		.bio-skill-experience>div:first-child>p:first-child{margin-right: 0.5rem;}
+		.bio-skill-experience>div:first-child>p:last-child{color: #b9b9b9;}
+		.bio-skill-cont{padding: 3.5%;background-color: #fff;width: 93%;margin-bottom: 0.5rem;border-radius: 0.3125rem;}
+		/* 技能 */
+	/* 	.bio-skill-ps{width: 13rem;}
+		.bio-skill-ai{width: 11rem;}
+		.bio-skill-c4d{width: 12rem;}
+		.bio-skill-web{width: 13rem;} */
+		/* 时间 */
+		.bio-skill-experience-cont-time{display: flex;flex-wrap: nowrap;font-size: 0.75rem;border-bottom: 0.0625rem solid #f1f1f1;width: 100%;padding: 0 0 0.6rem 0;}
+		.bio-skill-experience-cont-time p{margin-right: 0.5rem;}
+	/* 	.bio-skill-experience-cont-time{position: relative;}
+		.bio-skill-experience-cont-time::before{position: absolute;width: 0.5rem;height: 0.5rem;background-color: #000;content: '';top: 0.35rem;left: -0.92rem;} */
+		/* 联系 */
+		.bio-contact-title{display: flex;flex-wrap: nowrap;}
+		.bio-contact-title>P:first-child{margin-right: 0.5rem;}
+		.bio-contact-title>P:last-child{color: #b9b9b9;}
+		
+		/* 底下 */
+		.bio-footer{width:90%;margin: auto;}
+		.bio-footer-tips{margin-bottom: 6rem;}
+		
+		/* 侧边栏 */
+		.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
+		.side-wrap ul{display: none;}
+		.side-wrap div{background-color: rgba(0, 0, 0, 0.5);border: 0.0625rem solid #fff;margin: 0.5rem 0;border-radius: 0.5rem;width: 50%;}
 }
 
 /* 中等屏幕（桌面显示器，大于等于 992px） */
