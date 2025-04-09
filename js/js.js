@@ -1130,8 +1130,8 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
       spwer.style.transform = `translateX(-${pageNow * spwerDivWidth}px)`;
       
       // 更新当前轮播的分页样式
-      Pages.forEach(el => el.style.backgroundColor = '#fff');
-      this.style.backgroundColor = '#090A07';
+      Pages.forEach(el => el.style.backgroundColor = '#090A07');
+      this.style.backgroundColor = '#fff';
 	  
 	  // console.log(pageNow)
     });
@@ -1192,9 +1192,9 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
 		spwer.style.transform = `translateX(-${TdLeft}px)`;
 		
 		Pages.forEach(el => {
-			el.style.cssText = "background-color: #fff;";
+			el.style.cssText = "background-color: #090A07;";
 		})
-		Pages[pageNow].style.cssText = "background-color: #090A07;";
+		Pages[pageNow].style.cssText = "background-color: #fff;";
 
   });
 });
