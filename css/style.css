@@ -447,7 +447,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 中等屏幕（桌面显示器，大于等于 992px） */
 @media (min-width:992px) and (max-width:1200px) {
 	/* 简历 */
-	.biographical-notes-wrap{width: 80%;height: 70vh;margin-left: calc((100% - 80% - 2rem - 2rem) / 2);bottom:12vh;border-radius: 0.625rem;padding: 2rem 1.5rem;display: block;}
+	.biographical-notes-wrap{width: 80%;margin-left: calc((100% - 80% - 2rem - 2rem) / 2);display: none;}
 	.bio-cont-wrap{margin-top: 2rem;}
 	
 	/* 技能 */
