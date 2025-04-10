@@ -10,8 +10,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 @media (hover: hover) {
 	.cover-email:hover,.cover-code:hover{border: 0.125rem solid rgba(255, 255, 255, 0.5);}
 	/* 头像 */
-	.navbar-person-head:hover{background-color: rgba(255, 138, 0, 1);}
-	.navbar-person-head:hover svg path[fill="#090A07"] {fill: #fff !important; /* 使用!important提升优先级 */transition:all 0.5s ease;}
+	.navbar-person-head:hover{background: linear-gradient(90deg, rgba(84, 232, 207, 1) 0%, rgba(248, 63, 63, 1.0) 100%)}
+	.navbar-person-head:hover svg path[fill="#090A07"] {fill: #fff !important; /* 使用!important提升优先级 */transition:all 0.3s ease;}
 	/* 3d */
 	.main-content-3d-img img:hover{transform: scale(1.1);}
 	.d-spwer-page li:hover{background-color: #fff;}
@@ -26,7 +26,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 菜单内容 */
 .navbar-box{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
 /* 头像 */
-.navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;transition:all 0.3s ease;}
+.navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background: linear-gradient(90deg, rgba(84, 232, 207, 1) 0%, rgba(101, 166, 248, 1) 100%);display: flex;justify-content: center;align-items: center;cursor: pointer;transition:all 0.3s ease;}
 .mobile-person-btn{display: none;}
 /* 列表 */
 .navbar-list{display: flex;flex-wrap: nowrap;}
@@ -41,13 +41,23 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .PersonDownload-window{display: none;}
 
 /* 封面 */
-.cover-wrap{width: 85%;height: auto;margin: 0 auto 8rem auto;color: #fff;}
-.cover-addr{width: 100%;text-align: right;margin: 2rem 0;border-left: 0.125rem solid #fff;}
+.cover-wrap{width: 85%;height: auto;margin: 0 auto 8rem auto;color: #fff;position: relative;}
+.cover-wrap::before{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(45deg);bottom: 0;}
+.cover-wrap::after{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(-45deg);bottom: 0;}
+.cover-addr{width: auto;text-align: left;margin: 6rem 0 0rem 0;border: 0.0625rem solid rgba(255, 255, 255, 0.2);padding: 0.5rem;font-size: 0.75rem;display: flex;flex-wrap: nowrap;justify-content: space-between;}
 .cover-addr p:first-child{font-weight: bold;}
-.cover-addr p:last-child{font-size: 0.75rem;color: #a7a7a7;}
-.cover-title{font-size: 3.5rem;font-weight: bold;text-transform: uppercase;margin: 8rem 0 1rem 0;position: relative;}
-.cover-title::before{width: 0.0625rem;height: 100%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(45deg);top: 0;}
-.cover-title::after{width: 0.0625rem;height: 100%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(-45deg);top: 0;}
+.cover-addr p:last-child{color: #a7a7a7;}
+.cover-title{font-weight: bold;text-transform: uppercase;margin: 2rem 0 1rem 0;position: relative;}
+ /* 镂空边框 */
+.cover-title>p:last-child{-webkit-text-stroke: 1px #fff;text-stroke: 1px #fff;color: transparent;font-size: 5rem;}
+.cover-title>p:first-child{font-size: 5rem;}
+.cover-title>p:first-child>span:first-child{background: linear-gradient(90deg, #ff6b6b, #4ecdc4);background-clip: text;color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: gradient-flow 3s ease infinite;background-size: 200% 100%;margin-right: 1rem;}
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .cover-title-en{font-size: 0.625rem;color: #515151;text-transform: uppercase;}
 .cover-email{width: 13rem;height: 2.8rem;border-radius: 62.5rem;border: 0.125rem solid #fff;display: flex;justify-content: center;align-items: center;transition: all 0.3s ease;}
 .cover-email a{display: flex;flex-wrap: nowrap;justify-content: center;align-items: center;}
@@ -257,12 +267,14 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	
 	/* 封面 */
 	.cover-wrap{margin: 7rem auto 5rem auto;width: 90%;}
+	.cover-wrap::before{height: 20%;right: 10%;bottom: 11rem;}
+	.cover-wrap::after{height: 20%;right: 10%;bottom: 11rem;}
 	.cover-addr{border-left: 0;text-align: left;}
 	.cover-title{margin: 1rem 0 1rem 0;}
-	.cover-title::before{width: 0.0625rem;height: 5rem;right: 20%;top: 50%;}
-	.cover-title::after{width: 0.0625rem;height: 5rem;right: 20%;top:50%;}
 	.cover-contact{justify-content: center;}
 	.cover-code-img{display: none;}
+	.cover-title>p:first-child{font-size: 4rem;}
+	.cover-title>p:first-child>span{margin-right: 0;display: flex;flex-wrap: wrap;}
 	/* 二维码 */
 	.mobile-code{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
 	.mobile-code div{display: flex;justify-content: center;flex-wrap: wrap;}
