@@ -201,7 +201,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 简历、扫码*/
 	.mobile-nav-right{display: flex;flex-wrap: wrap;align-items: center;}
 	.mobile-per-btn{width: 0.8rem;height: 0.8rem;margin-right: 1rem;border: 0.125rem solid #fff;border-radius: 0.1rem;transition: all 0.3s ease;position: relative;display: block;}
-	.mobile-per-btn div{height: 0.1rem;background-color: #fff;position: absolute;}
+	.mobile-per-btn div{height: 1.5px;background-color: #fff;position: absolute;}
 	.mobile-per-btn-1{width: 0.6rem;left: 0;top: 0.125rem;}
 	.mobile-per-btn-2{width: 0.5rem;left: 0;top: 0.3125rem;}
 	.mobile-per-btn-3{width: 0.4rem;left: 0;top: 0.5rem;}
@@ -353,7 +353,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 简历、扫码*/
 	.mobile-nav-right{display: flex;flex-wrap: wrap;align-items: center;}
 	.mobile-per-btn{width: 0.8rem;height: 0.8rem;margin-right: 1rem;border: 0.125rem solid #fff;border-radius: 0.1rem;transition: all 0.3s ease;position: relative;display: block;}
-	.mobile-per-btn div{height: 0.1rem;background-color: #fff;position: absolute;}
+	.mobile-per-btn div{height: 1.5px;background-color: #fff;position: absolute;}
 	.mobile-per-btn-1{width: 0.6rem;left: 0;top: 0.125rem;}
 	.mobile-per-btn-2{width: 0.5rem;left: 0;top: 0.3125rem;}
 	.mobile-per-btn-3{width: 0.4rem;left: 0;top: 0.5rem;}
