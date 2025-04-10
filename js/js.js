@@ -1159,7 +1159,7 @@ Pages[0].classList.add('focus');
     spwer.style.transition = 'all 0 linear'; // 拖动时禁用动画，这里不能使用spwer.style.transition = '0'，否则会导致下方触摸送开时动画时间为0
 	
 	e.preventDefault(); // 阻止默认滚动
-  });
+  }, { passive: true });
 
 //触摸拖动事件
   spwer.addEventListener('touchmove', function(e) {
@@ -1172,7 +1172,7 @@ Pages[0].classList.add('focus');
 	
 	spwer.style.transform = `translateX(${moveX}px)`;
     // spwer.style.left = `${moveX}px`;
-  });
+  }, { passive: true });
 
 	//触摸松开事件
   spwer.addEventListener('touchend', function(e) {
@@ -1209,7 +1209,7 @@ Pages[0].classList.add('focus');
 		
 		isDragging = false;
 
-  });
+  }, { passive: true });
   
   // 鼠标事件——————————
     spwer.addEventListener('mousedown', function(event) {

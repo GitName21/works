@@ -16,6 +16,12 @@
 		<link rel="stylesheet" href="https://gitname21.github.io/HC/css/libs/animate.css"/>
 		<script src="js/wow.js"></script>
 		<script>new WOW().init();</script>
+		<script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.js"></script>
+		<script>
+		  document.addEventListener('DOMContentLoaded', function() {	//解决移动端点击js延迟执行
+		    FastClick.attach(document.body);
+		  }, false);
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -551,10 +557,4 @@
 		
 	</body>
 	<script type="text/javascript" src="js/js.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.js"></script>
-	<script>
-	  document.addEventListener('DOMContentLoaded', function() {	//解决移动端点击js延迟执行
-	    FastClick.attach(document.body);
-	  }, false);
-	</script>
 </html>
