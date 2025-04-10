@@ -83,6 +83,7 @@ mobile_navbar_btn.onclick = function(){
 		
 		navbar_list.style.cssText = "display: flex";
 		navbar_person.style.cssText = "display: flex";
+		// navbar_wrap.style.cssText = "overflow-y: scroll;";
 		
 		navbar_wrap.animate([	//导航栏打开动画
 			{
@@ -795,6 +796,8 @@ window.addEventListener('scroll', () => {
   // 如果是快速滑动，立即响应（不防抖）
   if (isScrollingFast) {
     updateActiveMenu();
+	scrollShow();       //侧边栏
+	ProgressBar();	//进度条
     lastScrollY = currentScrollY;
     return;
   }
@@ -804,9 +807,9 @@ window.addEventListener('scroll', () => {
   isScrolling = true;
   setTimeout(() => {
     updateActiveMenu();
-	scrollShow();       // 3. 实际执行任务
+	scrollShow();       //侧边栏
 	// mobilePerBtnS();
-	ProgressBar();
+	ProgressBar();	//进度条
 	
     isScrolling = false;
     lastScrollY = currentScrollY;
