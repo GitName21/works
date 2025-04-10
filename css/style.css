@@ -328,6 +328,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
 	.side-wrap ul{display: none;}
 	.side-wrap div{background-color: rgba(0, 0, 0, 0.5);border: 0.0625rem solid #fff;margin: 0.5rem 0;border-radius: 0.5rem;width: 50%;}
+	.side-wrap div:active{transform: scale(0.8);background-color: rgba(0, 0, 0, 0.8)}
 }
 
 /* 小屏幕（平板，大于等于 768px） */
@@ -456,6 +457,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.side-wrap{bottom: 3vh;display: flex;justify-content: center;flex-wrap: wrap;align-content: center;}
 	.side-wrap ul{display: none;}
 	.side-wrap div{background-color: rgba(0, 0, 0, 0.5);border: 0.0625rem solid #fff;margin: 0.5rem 0;border-radius: 0.5rem;width: 50%;}
+	.side-wrap div:active{transform: scale(0.8);background-color: rgba(0, 0, 0, 0.8)}
 }
 
 /* 中等屏幕（桌面显示器，大于等于 992px） */
