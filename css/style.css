@@ -9,6 +9,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 仅支持悬停的设备（PC）生效 */
 @media (hover: hover) {
 	.cover-email:hover,.cover-code:hover{border: 0.125rem solid rgba(255, 255, 255, 0.5);}
+	/* 头像 */
+	.navbar-person-head:hover{background-color: rgba(255, 138, 0, 1);}
+	.navbar-person-head:hover svg path[fill="#090A07"] {fill: #fff !important; /* 使用!important提升优先级 */transition:all 0.5s ease;}
 	/* 3d */
 	.main-content-3d-img img:hover{transform: scale(1.1);}
 	.d-spwer-page li:hover{background-color: #fff;}
@@ -23,8 +26,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 菜单内容 */
 .navbar-box{width: 85%;height: auto;margin: 0 auto;display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;}
 /* 头像 */
-.navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
-.navbar-person-head-1{width: 1.5rem;height: 1.5rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;}
+.navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background-color: rgba(204, 204, 204, 1);display: flex;justify-content: center;align-items: center;cursor: pointer;transition:all 0.3s ease;}
 .mobile-person-btn{display: none;}
 /* 列表 */
 .navbar-list{display: flex;flex-wrap: nowrap;}
@@ -185,7 +187,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 导航 */
 	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
 	/* 进度条 */
-	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #da840c;height: 0.125rem;transition: all 0.1s linear;}
+	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #ff8a00;height: 0.125rem;transition: all 0.1s linear;}
 	/* 菜单内容 */
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
@@ -206,7 +208,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	
 	.home-title{color: #fff;font-weight: bold;display: flex;flex-wrap: nowrap;align-items: center;position: relative;}
 	.home-title svg{margin: 0.1rem 0 0 -0.1rem;}
-	.home-title::before{width: 40%;height: 0.1rem;left: 30%;bottom: -0.5rem;background-color: #da840c;content: '';position: absolute;border-radius: 1rem;}
+	.home-title::before{width: 40%;height: 0.1rem;left: 30%;bottom: -0.5rem;background-color: #ff8a00;content: '';position: absolute;border-radius: 1rem;}
 	.show-button{width: 1.2rem;height: 0.9rem;position: relative;}
 	.show-button>li{width: 1.2rem;height: 0.12rem;background-color: #fff;position: absolute;transition: all 0.3s ease;}
 	.show-button>li:first-child{top: 0;}
@@ -337,7 +339,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 导航 */
 	.navbar-wrap{background-color: #090A07;border-bottom: 0.0625rem solid #252525;position: fixed;top: 0;left: 0;z-index: 99;}
 	/* 进度条 */
-	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #da840c;height: 0.125rem;transition: all 0.1s linear;}
+	.progressBar{display: block;width: 0%;position: absolute;bottom: -0.1rem;left: 0;background-color: #ff8a00;height: 0.125rem;transition: all 0.1s linear;}
 	/* 菜单内容 */
 	.navbar-box{flex-wrap: wrap;width: 90%;}
 	/* 列表 */
@@ -358,7 +360,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	
 	.home-title{color: #fff;font-weight: bold;display: flex;flex-wrap: nowrap;align-items: center;position: relative;}
 	.home-title svg{margin: 0.1rem 0 0 -0.1rem;}
-	.home-title::before{width: 40%;height: 0.1rem;left: 30%;bottom: -0.5rem;background-color: #da840c;content: '';position: absolute;border-radius: 1rem;}
+	.home-title::before{width: 40%;height: 0.1rem;left: 30%;bottom: -0.5rem;background-color: #ff8a00;content: '';position: absolute;border-radius: 1rem;}
 	.show-button{width: 1.2rem;height: 0.9rem;position: relative;}
 	.show-button>li{width: 1.2rem;height: 0.12rem;background-color: #fff;position: absolute;transition: all 0.3s ease;}
 	.show-button>li:first-child{top: 0;}
