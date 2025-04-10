@@ -6,6 +6,11 @@ img{border: 0;display: block;margin: 0;padding: 0;}
 
 body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe52.png#92c201942ea34efdbb36345b10d7d48f); */background-color:#090A07;font-size: 0.875rem;}
 
+/* 仅支持悬停的设备（PC）生效 */
+@media (hover: hover) {
+  .d-spwer-page li:hover{background-color: #fff;}
+}
+
 .no-scroll { overflow: hidden; }
 
 /* 导航 */
@@ -86,7 +91,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 翻页 */
 .d-spwer-page{position: absolute;bottom: 1rem;display: flex;flex-wrap: nowrap;width: 100%;height:auto;justify-content: center;left: 0;}
 .d-spwer-page li{margin: 0 0.5rem;text-align: center;background-color: #090A07;width: 1.5rem;height: 0.5rem;border-radius: 1rem;cursor: pointer;transition: all 0.3s linear;}
-.d-spwer-page li:first-child{background-color: #fff;}
+/* 颜色 */
+.d-spwer-page li.focus{background-color: #fff;}
+.d-spwer-page li:active{background-color: rgba(255, 255, 255, 0.5);}
 
 /* 感谢 */
 .thanks-wrap{width: 85%;margin: 10rem auto;}

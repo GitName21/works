@@ -1120,6 +1120,9 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
   // 获取当前轮播对应的分页按钮（必须与轮播在同一父级下）
   const Pages = spwer.parentElement.querySelectorAll('.d-spwer-page > li');
   if (!Pages.length) return;
+	
+// 默认颜色
+Pages[0].classList.add('focus');
 
   // 点击分页切换（修正为当前轮播的分页）
   Pages.forEach((page, index) => {
@@ -1127,11 +1130,11 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
       pageNow = index;
 	  spwerDivWidth = spwerDiv[pageNow].offsetWidth;	//获取当前div宽度
 	  // console.log('div宽度：',spwerDivWidth)
-      spwer.style.transform = `translateX(-${pageNow * spwerDivWidth}px)`;
+      spwer.style.transform = `translateX(-${pageNow * 100}%)`;
       
       // 更新当前轮播的分页样式
-      Pages.forEach(el => el.style.backgroundColor = '#090A07');
-      this.style.backgroundColor = '#fff';
+      Pages.forEach(el => el.classList.remove('focus'));
+      this.classList.add('focus');
 	  
 	  // console.log(pageNow)
     });
@@ -1187,14 +1190,14 @@ document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
 		// console.log('当前引索是：' + pageNow)
 		spwerDivWidth = spwerDiv[pageNow].offsetWidth;	//获取当前div宽度
 		// console.log('鼠标松开当前div宽度是：' + spwerDivWidth)
-		TdLeft = pageNow*spwerDivWidth;
+		TdLeft = pageNow*100;
 		// spwer.style.cssText = "left:" + -TdLeft + "%";
-		spwer.style.transform = `translateX(-${TdLeft}px)`;
+		spwer.style.transform = `translateX(-${TdLeft}%)`;
 		
 		Pages.forEach(el => {
-			el.style.cssText = "background-color: #090A07;";
+			el.classList.remove('focus')
 		})
-		Pages[pageNow].style.cssText = "background-color: #fff;";
+		Pages[pageNow].classList.add('focus')
 
   });
 });
