@@ -269,7 +269,6 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.cover-wrap{margin: 7rem auto 5rem auto;width: 90%;}
 	.cover-wrap::before{height: 20%;right: 10%;bottom: 11rem;}
 	.cover-wrap::after{height: 20%;right: 10%;bottom: 11rem;}
-	.cover-addr{border-left: 0;text-align: left;}
 	.cover-title{margin: 1rem 0 1rem 0;}
 	.cover-contact{justify-content: center;}
 	.cover-code-img{display: none;}
