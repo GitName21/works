@@ -100,8 +100,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
 /* 3d */
 .main-content-3d>div{width: 32%;height: auto;margin-bottom: 0.5rem;}
+.main-content-3d img{  -webkit-user-drag: none;  /* Chrome/Safari/Edge */user-drag: none;/* 标准属性 */}
 .main-content-3d-title p:last-child{font-size: 0.75rem;color: #545454;}
-.main-content-3d-img{margin-bottom: 0.5rem;position: relative;overflow: hidden;}
+.main-content-3d-img{margin-bottom: 0.5rem;position: relative;overflow: hidden;cursor: pointer;}
 /* 轮播 */
 .main-content-3d-3d-spwer{display: flex;flex-wrap: nowrap;position: relative;left: 0;width:auto;transition: all 0.3s linear;}
 .main-content-3d-3d-spwer div{flex-shrink: 0;width: 100%;height: auto;}
