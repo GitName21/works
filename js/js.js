@@ -1105,7 +1105,7 @@ function mobilePerBtnS(){
 // AI修复
   // 禁止图片拖动
   const imgDragstart = document.querySelectorAll('.main-content-3d-img img');
-  console.log('禁止拖动图片：',imgDragstart)
+  // console.log('禁止拖动图片：',imgDragstart)
   imgDragstart.forEach(img => {
     img.addEventListener('dragstart', e => e.preventDefault());
   });
@@ -1222,7 +1222,7 @@ Pages[0].classList.add('focus');
   	// console.log('目前的左值是：' + XNumber)
       spwer.style.transition = 'all 0 linear'; // 拖动时禁用动画，这里不能使用spwer.style.transition = '0'，否则会导致下方触摸送开时动画时间为0
   	
-  	e.preventDefault(); // 阻止默认滚动
+  	// e.preventDefault(); // 阻止默认滚动
     });
   
   //触摸拖动事件
@@ -1274,6 +1274,40 @@ Pages[0].classList.add('focus');
   		isDragging = false;
   
     });
+	// 鼠标离开对象
+	spwer.addEventListener('mouseout',function(event){
+      if (!isDragging) return;
+  	
+  		moveEndX = event.clientX - startX;	//松开时一共移动了多少距离 = 松开时 - 按下时
+  		// console.log('松开了,共移动：' + moveEndX)
+  		
+  		if(moveEndX<-50){
+  			pageNow++;
+  			if(pageNow >= spwerDiv.length-1){	//长度和引索相差1:例如长度是3，引索就是2:0,1,2
+  				pageNow = spwerDiv.length-1;
+  			}
+  		}
+  		if(moveEndX>50){
+  			pageNow--;
+  			if(pageNow <= 0){
+  				pageNow = 0;
+  			}
+  		}
+  		spwer.style.transition = 'all 0.3s linear'; // 松开时启动动画'
+  		// console.log('当前引索是：' + pageNow)
+  		spwerDivWidth = spwerDiv[pageNow].offsetWidth;	//获取当前div宽度
+  		// console.log('鼠标松开当前div宽度是：' + spwerDivWidth)
+  		TdLeft = pageNow*100;
+  		// spwer.style.cssText = "left:" + -TdLeft + "%";
+  		spwer.style.transform = `translateX(-${TdLeft}%)`;
+  		
+  		Pages.forEach(el => {
+  			el.classList.remove('focus')
+  		})
+  		Pages[pageNow].classList.add('focus')
+  		
+  		isDragging = false;
+	})
   
 });
 
