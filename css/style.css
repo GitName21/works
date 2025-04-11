@@ -15,6 +15,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	/* 3d */
 	.main-content-3d-img img:hover{transform: scale(1.1);}
 	.d-spwer-page li:hover{background-color: #fff;}
+	/* 画册 */
+	.main-content-album-2 img:hover,.main-content-album img:hover,.main-content-album-1 img:hover{transform: scale(1.1);}
 }
 
 .no-scroll { overflow: hidden; }
@@ -93,9 +95,9 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .mobile-cont{display: none;}
 /* .main-content-exhibition div{} */
 /* 画册排版 */
-.main-content-album div{width: 33%;height: auto;margin-bottom: 0.6rem;}
-.main-content-album-1 div{width:49.75%;height: auto;margin-bottom: 0.6rem;}
-.main-content-album-2 div{width: 33%;height: auto;margin-bottom: 0.6rem;}
+.main-content-album div{width: 33%;height: auto;margin-bottom: 0.6rem;overflow: hidden;}
+.main-content-album-1 div{width:49.75%;height: auto;margin-bottom: 0.6rem;overflow: hidden;}
+.main-content-album-2 div{width: 33%;height: auto;margin-bottom: 0.6rem;overflow: hidden;}
 /* h5 */
 .main-content-h5 div{width: 16.666%;height: auto;margin-bottom: 0.6rem;}
 /* 3d */
