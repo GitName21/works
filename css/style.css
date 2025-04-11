@@ -282,7 +282,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.mobile-code img{width: 40%;height: auto;}
 	
 	/* 简历 */
-	.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;}
+	.biographical-notes-wrap{width: 100%;height: 94vh;margin-left: 0;top:0vh;padding: 3vh 0% 3vh 0%;overflow: scroll;border-radius: 0 0 0 0;overscroll-behavior: contain;}
 	/* 简历下载 */
 	.PersonDownload-window{width: 100%;height: 40vh;background-color: #fff;position: fixed;display: flex;bottom: 0rem;left: 0;justify-content: center;align-items: center;padding:0;border-radius: 1.25rem 1.25rem 0 0;flex-wrap: wrap;display: none;z-index: 9999;align-content: center;}
 	.PersonDownload-window div{width: 100%;display: flex;justify-content: center;}
