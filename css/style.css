@@ -19,6 +19,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.main-content-album-2 img:hover,.main-content-album img:hover,.main-content-album-1 img:hover{transform: scale(1.1);}
 	/* 底部 */
 	.top-wrap>.wow:hover{background-color: #252525;}
+	
 }
 
 .no-scroll { overflow: hidden; }
@@ -46,8 +47,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 
 /* 封面 */
 .cover-wrap{width: 85%;height: auto;margin: 0 auto 8rem auto;color: #fff;position: relative;}
-.cover-wrap::before{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(45deg);bottom: 0;}
-.cover-wrap::after{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 5%;transform: rotate(-45deg);bottom: 0;}
+.cover-wrap::before{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 2.5%;transform: rotate(45deg);bottom: 0;}
+.cover-wrap::after{width: 0.0625rem;height: 20%;background-color: #fff;content: '';position: absolute;right: 2.5%;transform: rotate(-45deg);bottom: 0;}
 .cover-addr{width: auto;text-align: left;margin: 6rem 0 0rem 0;border: 0.0625rem solid rgba(255, 255, 255, 0.2);padding: 0.5rem;font-size: 0.75rem;display: flex;flex-wrap: nowrap;justify-content: space-between;}
 .cover-addr p:first-child{font-weight: bold;}
 .cover-addr p:last-child{color: #a7a7a7;}
@@ -120,7 +121,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 感谢 */
 .thanks-wrap{width: 100%;margin: 10rem auto 0 auto;background-color: #141414;padding: 8rem 0;border-bottom: 0.0625rem solid #252525;}
 .thanks-wrap-title{border: 0.0625rem solid #fff;width: fit-content;padding: 0 0.8rem;line-height: 1.5rem;font-size: 0.75rem;margin: 0 auto 2rem auto;}
-.thanks-title{font-size: 4rem;text-transform: uppercase;text-align: center;padding-bottom: 2rem;position: relative;}
+.thanks-title{font-size: 4rem;text-transform: uppercase;text-align: center;padding-bottom: 2rem;position: relative;background: linear-gradient(90deg, #ff6b6b, #4ecdc4);background-clip: text;color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .thanks-title::before{position: absolute;width: 10%;height: 0.1875rem;background-color: #fff;content: '';bottom: 0;left: calc((100% - 10%) / 2);border-radius: 1rem;}
 .thanks-menu{display: flex;flex-wrap: nowrap;justify-content: center;align-items: center;margin-top: 2.5rem;}
 .thanks-menu ul{display: flex;flex-wrap: nowrap;justify-content: center;}
@@ -189,9 +190,10 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .side-wrap div{width: 60%;display: flex;justify-content: center;cursor: pointer;margin: 0 auto;transition: all 0.25s ease;}
 .side-wrap ul{line-height: 1.6rem;font-size: 0.75rem;text-align: center;color: #8b8b8b;}
 .side-wrap ul li{padding: 0 0.5rem;transition: all 0.3s ease;margin: 0.5rem 0;border-radius: 0.3125rem;cursor: pointer;-webkit-user-select: none; /* Chrome, Safari, Opera */-moz-user-select: none;    /* Firefox */-ms-user-select: none;     /* IE 10+ */user-select: none;         /* Standard syntax */}
-.side-wrap ul li:hover{background-color: #3b3b3b;color: #fff;}
+.side-wrap ul li:hover{color: #fff;}
 .side-next{transform: rotate(180deg);}
-.side-focus{color: #fff;}
+.side-focus{color: #fff;background-color: #3b3b3b;}
+.side-wrap ul li:active{transform: scale(0.7);}
 
 /* 遮罩 */
 .mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;z-index: 999;}
