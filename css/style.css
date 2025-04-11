@@ -83,7 +83,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .main-title>div{width: 100%;text-align: center;}
 .main-separate{height: auto;display: flex;flex-wrap: nowrap;width: 100%;justify-content: space-between;border-top: 0.0625rem solid #393939;border-bottom: 0.0625rem solid #393939;font-size: 0.75rem;line-height: 1.5rem;color: #b4b4b4;margin: 0 auto 0.5rem auto;}
 .main-title-ch{font-size:1.5rem;margin-bottom: 1rem;font-weight: bold;letter-spacing: 0.25rem;}
-.main-title-en{position: relative;color: #fff;font-size: 2rem;font-weight: bold;}
+.main-title-en{position: relative;color: #fff;font-size: 2rem;font-weight: bold;background: linear-gradient(90deg, #ff6b6b, #4ecdc4);background-clip: text;color: transparent;-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .main-title-en::before,.main-title-en::after{position: absolute;height: 0.8rem;content: '';background-color: #474747;}
 .main-title-en::before{width: 0.8rem;border-radius: 100%;left: 0;}
 .main-title-en::after{width: 3rem;left: 2rem;border-radius: 1rem;}
