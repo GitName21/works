@@ -1116,9 +1116,9 @@ function mobilePerBtnS(){
 document.querySelectorAll('.main-content-3d-3d-spwer').forEach(spwer => {
   // 每个轮播的独立变量
   let pageNow = 0;
-  let startX;
+  let startX,startY;
   let isDragging = false;
-  let moveX;
+  let moveX,moveXNormal,moveY;
   let moveEndX;
   let XValue;	//X方向偏移的值
   let XNumber;	//X方向偏移的解析浮点数
@@ -1153,6 +1153,7 @@ Pages[0].classList.add('focus');
   // 触摸事件（绑定到当前轮播）
   spwer.addEventListener('touchstart', function(e) {
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
     isDragging = true;
 	
 	// 获取 left 值
@@ -1161,7 +1162,6 @@ Pages[0].classList.add('focus');
 	// console.log('目前的左值是：' + XNumber)
     spwer.style.transition = 'all 0 linear'; // 拖动时禁用动画，这里不能使用spwer.style.transition = '0'，否则会导致下方触摸送开时动画时间为0
 	
-	e.preventDefault(); // 阻止默认滚动
   });
 
 //触摸拖动事件
@@ -1170,10 +1170,16 @@ Pages[0].classList.add('focus');
     if (!isDragging) return;
 	
     moveX = e.touches[0].clientX - startX;
+	moveXNormal = Math.abs(moveX);
+    moveY = e.touches[0].clientY - startY;
 	moveX = XNumber + moveX;	//要加上当前左边偏移的值，否则会跳转到第一张，以为移动的时候距离是从0开始的
-	// console.log('手指滑动了：' + moveX)
+	// console.log('手指Y滑动了：' + moveY)
 	
-	spwer.style.transform = `translateX(${moveX}px)`;
+	if(moveXNormal > Math.abs(moveY)){
+		e.preventDefault(); // 阻止默认滚动
+		spwer.style.transform = `translateX(${moveX}px)`;
+	}
+	
     // spwer.style.left = `${moveX}px`;
   });
 
