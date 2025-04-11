@@ -31,8 +31,8 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .navbar-person-head{width: 1.875rem;height: 1.875rem;border-radius: 100%;background: linear-gradient(90deg, rgba(84, 232, 207, 1) 0%, rgba(101, 166, 248, 1) 100%);display: flex;justify-content: center;align-items: center;cursor: pointer;transition:all 0.3s ease;}
 .mobile-person-btn{display: none;}
 /* 列表 */
-.navbar-list{display: flex;flex-wrap: nowrap;}
-.navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;color: #a7a7a7;cursor: pointer;}
+.navbar-list{display: flex;flex-wrap: nowrap;color: #a7a7a7;}
+.navbar-list>li{margin: 2rem 5rem 2rem 0;transition: all 0.3s ease;cursor: pointer;}
 .navbar-list>li:hover{color: #fff;}
 .mobile-navbar-title{transition: 0s all ease;opacity: 0;visibility: hidden;width: 0;}
 /* 移动端菜单展开按钮 */
