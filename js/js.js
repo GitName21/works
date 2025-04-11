@@ -494,7 +494,7 @@ biographical_notes.addEventListener('scroll',function(){
 
 
 // 返回顶部
-let top_wrap = document.querySelector('.top-wrap');
+let top_wrap = document.querySelector('.top-wrap .wow');
 // 核心滚动函数（支持自定义速度）
 function smoothScrollTop(duration = 800) {
     const start = window.pageYOffset || document.documentElement.scrollTop;
