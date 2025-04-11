@@ -120,11 +120,11 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 /* 感谢 */
 .thanks-wrap{width: 100%;margin: 10rem auto 0 auto;background-color: #141414;padding: 8rem 0;border-bottom: 0.0625rem solid #252525;}
 .thanks-wrap-title{border: 0.0625rem solid #fff;width: fit-content;padding: 0 0.8rem;line-height: 1.5rem;font-size: 0.75rem;margin: 0 auto 2rem auto;}
-.thanks-title{font-size: 3rem;text-transform: uppercase;text-align: center;padding-bottom: 2rem;position: relative;}
+.thanks-title{font-size: 4rem;text-transform: uppercase;text-align: center;padding-bottom: 2rem;position: relative;}
 .thanks-title::before{position: absolute;width: 10%;height: 0.1875rem;background-color: #fff;content: '';bottom: 0;left: calc((100% - 10%) / 2);border-radius: 1rem;}
 .thanks-menu{display: flex;flex-wrap: nowrap;justify-content: center;align-items: center;margin-top: 2.5rem;}
 .thanks-menu ul{display: flex;flex-wrap: nowrap;justify-content: center;}
-.thanks-menu ul li{margin: 0 2rem;display: flex;justify-content: center;flex-wrap: wrap;width: 20%;}
+.thanks-menu ul li{margin: 0 2rem;display: flex;justify-content: center;flex-wrap: wrap;width: 20%;align-content: flex-end;}
 .thanks-menu ul li div{display: flex;justify-content: center;align-items: center;width: 100%;}
 
 /* 返回顶部 */
@@ -267,7 +267,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	
 	/* 感谢 */
 	.thanks-wrap{margin: 5rem auto 0 auto;width: 100%;padding: 3rem 0;}
-	.thanks-title{font-size: 4rem;}
+	.thanks-title{font-size: 3rem;}
 	.thanks-menu{display: flex;flex-wrap: wrap;}
 	.thanks-menu ul{justify-content: space-between;width: 90%;margin: 0.5rem auto 0 auto;}
 	.thanks-menu ul li{margin: 0;width: auto;}
