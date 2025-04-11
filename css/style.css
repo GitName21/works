@@ -274,7 +274,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.thanks-menu ul li div{width: auto;color: #666666;}
 	.thanks-menu-email{transform: scale(0.6) translate(-1rem);}
 	.thanks-menu-wechat{transform: scale(0.6) translate(-1.25rem);}
-	.thanks-menu-iphone{transform: scale(0.6) translate(-0.8rem);}
+	.thanks-menu-iphone{transform: scale(0.6) translate(-0.75rem);}
 	
 	/* 返回顶部 */
 	.top-wrap>div:first-child{width: 50%;height: 3.125rem;}
