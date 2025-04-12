@@ -8,6 +8,8 @@
 [data-theme="dark"] {
   --bg-color: #090A07;
   --text-color-fff: #ffffff;
+  --text-color-a7: #a7a7a7;
+  --border-color: #393939;
 }
 
 /* 通用 */
