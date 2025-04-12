@@ -894,7 +894,7 @@ function scrollShow() {
 	sideWrap.animate([
 		{
 			opacity:1,
-			right:'0.5rem'
+			right:'1.5rem'
 		}
 	],{
 		duration:300,

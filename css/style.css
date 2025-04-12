@@ -27,7 +27,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 	.navbar-person-head:hover{background: linear-gradient(90deg, rgba(84, 232, 207, 1) 0%, rgba(248, 63, 63, 1.0) 100%)}
 	.navbar-person-head:hover svg path[fill="#090A07"] {fill: #fff !important; /* 使用!important提升优先级 */transition:all 0.3s ease;}
 	/* 3d */
-	.main-content-3d-img img:hover{transform: scale(1.1);}
+	.main-content-3d-img img:hover{transform: scale(1.1);}  
 	.d-spwer-page li:hover{background-color: var(--text-color-fff);}
 	/* 画册 */
 	.main-content-album-2 img:hover,.main-content-album img:hover,.main-content-album-1 img:hover{transform: scale(1.1);}
@@ -210,7 +210,7 @@ body{/* background: url(https://img.js.design/assets/img/675906b3d05e64e31759fe5
 .side-wrap ul li:active{transform: scale(0.7);}
 
 /* 遮罩 */
-.mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.3);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(3px);display: none;z-index: 999;}
+.mask{width: 100vw;height: 100vh;background: rgba(0, 0, 0, 0.5);position: fixed;top: 0;left: 0;transform: translateZ(0); /* 启用GPU加速优化性能[3](@ref) */ backdrop-filter: blur(0);display: none;z-index: 999;}
 
 /* 超小屏幕（手机，小于 768px） */
 @media (max-width: 767px) {
